@@ -1,12 +1,22 @@
 .home-main-container {
   padding: 10px 5px;
+  z-index: 0;
+  position: relative;
+}
+
+.main-gadget-container {
+  display: flex;
+  background: linear-gradient(#b79981, #a6806a);
+  z-index: -5;
+  border-radius: 20px;
+  padding: 20px;
 }
 .lamp-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 70px 40px 40px 40px;
-  background-color: #000;
+  /* background-color: #000; */
   z-index: -4;
 }
 .lamp {
@@ -57,4 +67,107 @@
     rgba(255, 255, 255, 1) 10%,
     rgba(242, 235, 144, 0) 65%
   );
+}
+
+.phone-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  z-index: -4;
+}
+
+.phone {
+  width: 80px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #222;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 10px #222;
+}
+
+.phone::after {
+  content: "";
+  bottom: -5px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #b6b5b5;
+}
+
+.phone span {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.phone div:nth-child(1) {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.phone div:nth-child(2) {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.message-container {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.text-message {
+  width: 0px;
+  height: 0px;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  position: absolute;
+  border: 0px;
+  right: 0;
+}
+
+.animate {
+  animation: sendMessage 1600ms linear;
+}
+
+@keyframes sendMessage {
+  25% {
+    border-top: solid rgb(88, 88, 88) 20px;
+    border-bottom: solid #f3f3f3 20px;
+    border-left: solid #f3f3f3 25px;
+    border-right: solid #f3f3f3 25px;
+    right: 25%;
+  }
+  75% {
+    border-top: solid rgb(88, 88, 88) 20px;
+    border-bottom: solid #f3f3f3 20px;
+    border-left: solid #f3f3f3 25px;
+    border-right: solid #f3f3f3 25px;
+    right: 75%;
+  }
+  100% {
+    border: 0px;
+    right: 100%;
+  }
 }

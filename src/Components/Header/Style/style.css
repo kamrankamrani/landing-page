@@ -28,6 +28,7 @@
   justify-content: center;
   padding-top: 20px;
   transition: visibility 0s, opacity 0.2s ease-in;
+  z-index: 10;
 }
 
 .dropdown-content div {
@@ -66,6 +67,7 @@
   display: block;
   margin: 5px 0px 5px 0px;
   font-size: 0.9em;
+  font-family: Vazirmatn;
 }
 
 .dropdown-content p:hover {

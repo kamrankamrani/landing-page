@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import screenSizeReducer from "./features/ToggleScreenSize/screenSizeSlice";
+import commentsSlice from "./features/commentsSlice/commentsSlice";
+import screenSizeReducer from "./features/screenSizeSlice/screenSizeSlice";
 
 export const store = configureStore({
   reducer: {
     screenSize: screenSizeReducer,
+    commentsSlice: commentsSlice,
   },
 });
 

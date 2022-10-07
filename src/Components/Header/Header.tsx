@@ -4,7 +4,7 @@ import "./Style/style.css";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { setScreenSmallSize } from "../../features/ToggleScreenSize/screenSizeSlice";
+import { setScreenSmallSize } from "../../features/screenSizeSlice/screenSizeSlice";
 import DehazeRoundedIcon from "@mui/icons-material/DehazeRounded";
 
 export default function Header() {
