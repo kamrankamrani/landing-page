@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import { Grid, Typography } from "@mui/material";
 import { useEffect, useState, useRef } from "react";
 import { setComments } from "../../features/commentsSlice/commentsSlice";
@@ -11,7 +12,7 @@ export default function Comments() {
   const [sliderEl, setSliderEl] = useState<HTMLElement>();
   const [isMouseDown, setIsMouseDown] = useState<boolean>(false);
   const startX = useRef<number>(0);
-  let scrollLeft = useRef<number>(0);
+  const scrollLeft = useRef<number>(0);
   const dispatch = useAppDispatch();
   const commentsArr: commentType[] = useAppSelector(
     (state) => state.commentsSlice.comments
@@ -62,7 +63,7 @@ export default function Comments() {
       >
         {commentsArr.map((value, index) => {
           return (
-            <div className="single-item-container">
+            <div key={index} className="single-item-container">
               <div className="comment-item">
                 <Typography variant="body2">{value.text}</Typography>
                 <div>

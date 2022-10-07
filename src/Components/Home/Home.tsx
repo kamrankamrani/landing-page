@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useAppSelector } from "../../hooks";
