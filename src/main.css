@@ -7,3 +7,13 @@ body {
 body::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
+
+/* some useful colors */
+.useless-class {
+  color: #0a0b0f;
+  color: #5c6268;
+  color: #bbc3c8;
+  color: #dcdfe2;
+  color: #4d9760;
+  color: #a0d3b7;
+}

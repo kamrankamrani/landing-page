@@ -1,0 +1,81 @@
+.lamp-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 70px 40px 40px 40px;
+  /* background-color: #000; */
+  z-index: -4;
+}
+.lamp {
+  width: 50px;
+  height: 50px;
+  background-color: #999;
+  border-radius: 50%;
+  position: relative;
+}
+
+.turn-on-lamp-animation {
+  animation: turnOnLamp 1000ms linear;
+}
+
+.lamp::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 40px;
+  border-radius: 10px 10px 0px 0px;
+  border-top: solid #222 20px;
+  background-color: inherit;
+  left: 15px;
+  top: -25px;
+  z-index: -1;
+}
+
+.lamp::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background-color: #222;
+  left: 23px;
+  top: -50px;
+  z-index: -2;
+}
+
+.lamp-on {
+  background-color: #f7f7f7;
+}
+
+.shadow {
+  z-index: -3;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(247, 247, 247, 1) 10%,
+    rgba(242, 235, 144, 0) 65%
+  );
+}
+
+@keyframes turnOnLamp {
+  10% {
+    background-color: #ffdf00;
+  }
+  15% {
+    background-color: #999;
+  }
+  40% {
+    background-color: #ffdf00;
+  }
+  50% {
+    background-color: #999;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .lamp-container {
+    padding: 60px 10px 10px 10px;
+  }
+}

@@ -1,0 +1,8 @@
+.main-gadget-container {
+  display: flex;
+  background: linear-gradient(#b79981, #a6806a);
+  /* background-color: #fafafa; */
+  z-index: -5;
+  border-radius: 20px;
+  padding: 20px;
+}

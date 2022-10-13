@@ -1,0 +1,78 @@
+.phone-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  z-index: -4;
+}
+
+.phone {
+  width: 80px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #222;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 10px #222;
+}
+
+.phone::after {
+  content: "";
+  bottom: -5px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #b6b5b5;
+}
+
+.phone span {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.phone div:nth-child(1) {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.phone div:nth-child(2) {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.phone div:nth-child(3) {
+  position: absolute;
+  bottom: -50px;
+  width: 130px;
+  height: 30px;
+  /* background-color: #222; */
+  background: radial-gradient(
+    ellipse,
+    rgb(73, 73, 73) 1%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+@media screen and (max-width: 600px) {
+  .phone-container {
+    padding: 5px 5px 20px 5px;
+  }
+}
