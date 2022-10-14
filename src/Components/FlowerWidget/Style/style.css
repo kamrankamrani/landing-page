@@ -1,0 +1,126 @@
+.flower-widget-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  z-index: -4;
+  position: relative;
+}
+
+.flower-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #917a67;
+  z-index: -3;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flower-pot {
+  width: 30px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 30px solid #ff7043;
+  z-index: 0;
+  bottom: 5px;
+}
+
+.flower-pot::before {
+  content: "";
+  width: 60px;
+  height: 10px;
+  position: absolute;
+  background-color: #ff7043;
+  z-index: 0;
+  bottom: 25px;
+  left: -15px;
+}
+
+.flower {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: darkorange;
+  border-radius: 50%;
+  top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* animation: flowerRotate 1500ms linear infinite; */
+}
+
+.flower::after {
+  content: "";
+  width: 5px;
+  height: 40px;
+  z-index: -4;
+  background-color: brown;
+  position: absolute;
+  top: 10px;
+}
+
+.flower-rotate-animation {
+  animation: flowerRotate 2500ms linear infinite;
+}
+
+.flower > div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 40px;
+  height: 40px;
+  z-index: -3;
+  transform-origin: 20px 35px;
+}
+
+.flower > div :nth-of-type(1) {
+  width: 15px;
+  height: 10px;
+  background-color: #e91e63;
+  border-top: solid #e91e63 15px;
+  border-top-right-radius: 30%;
+  border-top-left-radius: 30%;
+  position: absolute;
+  z-index: -3;
+}
+
+.flower div :nth-of-type(2) {
+  width: 15px;
+  height: 10px;
+  background-color: #e91e63;
+  border-top: solid #e91e63 15px;
+  border-top-right-radius: 30%;
+  border-top-left-radius: 30%;
+  position: absolute;
+  z-index: -3;
+  transform: rotate(120deg);
+  top: 26px;
+  left: 20px;
+}
+
+.flower div :nth-of-type(3) {
+  width: 15px;
+  height: 10px;
+  background-color: #e91e63;
+  border-top: solid #e91e63 15px;
+  border-top-right-radius: 30%;
+  border-top-left-radius: 30%;
+  position: absolute;
+  z-index: -3;
+  transform: rotate(240deg);
+  align-self: flex-start;
+  left: 6px;
+  top: 26px;
+}
+
+@keyframes flowerRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
