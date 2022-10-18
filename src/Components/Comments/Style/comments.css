@@ -21,7 +21,11 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   cursor: pointer;
-  scroll-snap-type: x proximity;
+  scroll-padding-right: 30px;
+}
+
+.comments-scroll-enable {
+  scroll-snap-type: x mandatory;
 }
 
 .single-item-container {
@@ -34,7 +38,7 @@
   border: solid rgba(29, 29, 29, 0.2) 1px;
   height: 150px;
   white-space: inherit;
-  width: 250px;
+  /* width: 250px; */
   border-radius: 10px;
   /* margin: 0px 15px; */
   background-color: #fff;
@@ -45,6 +49,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  scroll-snap-align: end;
 }
 
 .comment-item p,

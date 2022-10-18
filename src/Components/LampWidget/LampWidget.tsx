@@ -27,8 +27,9 @@ export default function LampWidget() {
 
   return (
     <div className="lamp-container">
-      <div className="lamp"></div>
-      <div className="lamp-box"></div>
+      <div className="lamp-box">
+        <div className="lamp"></div>
+      </div>
       {lampIsOn ? <div className="shadow"></div> : null}
     </div>
   );

@@ -55,15 +55,24 @@ export default function Comments() {
 
   return (
     <Grid container className="comments-parent">
-      <div
-        className="comments-container"
+      <Grid
+        container
+        className={`comments-container ${
+          isMouseDown ? "" : "comments-scroll-enable"
+        }`}
         onMouseUp={handleMouseUp}
         onMouseDown={(event) => handleMouseDown(event)}
         onMouseMove={(event) => handleSliderDrag(event)}
       >
         {commentsArr.map((value, index) => {
           return (
-            <div key={index} className="single-item-container">
+            <Grid
+              xs={12}
+              sm={4}
+              lg={3}
+              key={index}
+              className="single-item-container"
+            >
               <div className="comment-item">
                 <Typography variant="body2">{value.text}</Typography>
                 <div>
@@ -72,10 +81,10 @@ export default function Comments() {
                   </Typography>
                 </div>
               </div>
-            </div>
+            </Grid>
           );
         })}
-      </div>
+      </Grid>
     </Grid>
   );
 }

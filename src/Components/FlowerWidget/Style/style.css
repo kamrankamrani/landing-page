@@ -11,12 +11,14 @@
   width: 120px;
   height: 120px;
   border-radius: 10px;
-  background-color: #917a67;
+  /* background-color: #917a67; */
+  background-color: #93a4e2;
   z-index: -3;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .flower-pot {
@@ -39,6 +41,7 @@
   z-index: 0;
   bottom: 25px;
   left: -15px;
+  filter: drop-shadow(0px 10px 15px #212121);
 }
 
 .flower {
@@ -50,7 +53,7 @@
   top: 40px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   /* animation: flowerRotate 1500ms linear infinite; */
 }
 
@@ -72,52 +75,40 @@
   position: absolute;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 40px;
   height: 40px;
   z-index: -3;
-  transform-origin: 20px 35px;
-  /* animation: flowerRotate 2500ms linear infinite; */
+  /* transform-origin: 20px 35px; */
 }
 
 .flower > div :nth-of-type(1) {
-  width: 15px;
-  height: 10px;
+  width: 40px;
+  height: 15px;
   background-color: #e91e63;
-  border-top: solid #e91e63 15px;
-  border-top-right-radius: 30%;
-  border-top-left-radius: 30%;
+  border-radius: 10px;
   position: absolute;
   z-index: -3;
 }
 
 .flower div :nth-of-type(2) {
-  width: 15px;
-  height: 10px;
+  width: 40px;
+  height: 15px;
   background-color: #e91e63;
-  border-top: solid #e91e63 15px;
-  border-top-right-radius: 30%;
-  border-top-left-radius: 30%;
+  border-radius: 10px;
   position: absolute;
   z-index: -3;
   transform: rotate(120deg);
-  top: 26px;
-  left: 20px;
 }
 
 .flower div :nth-of-type(3) {
-  width: 15px;
-  height: 10px;
+  width: 40px;
+  height: 15px;
   background-color: #e91e63;
-  border-top: solid #e91e63 15px;
-  border-top-right-radius: 30%;
-  border-top-left-radius: 30%;
+  border-radius: 10px;
   position: absolute;
   z-index: -3;
   transform: rotate(240deg);
-  align-self: flex-start;
-  left: 6px;
-  top: 26px;
 }
 
 .flower-rain {
@@ -189,5 +180,12 @@
   100% {
     top: 100%;
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flower-widget-container {
+    padding: 60px 10px 10px 10px;
+    order: 3;
   }
 }

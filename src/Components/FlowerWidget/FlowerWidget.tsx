@@ -1,7 +1,8 @@
+import { useAppSelector } from "../../hooks";
 import "./Style/style.css";
 
 export default function FlowerWidget() {
-  const isRain = false;
+  const isRain = useAppSelector((state) => state.widgetSlice.isRain);
   return (
     <div className="flower-widget-container">
       <div className="flower-box">
@@ -15,7 +16,7 @@ export default function FlowerWidget() {
         </div>
         <div className="flower-pot"></div>
         <div className="flower">
-          <div>
+          <div className={`${isRain ? "flower-rotate-animation" : ""}`}>
             <div></div>
             <div></div>
             <div></div>

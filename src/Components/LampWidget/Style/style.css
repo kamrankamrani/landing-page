@@ -11,7 +11,9 @@
   height: 36px;
   background-color: #999;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
+  top: 42px;
+  left: 44px;
 }
 
 .turn-on-lamp-animation {
@@ -63,13 +65,15 @@
 
 .lamp-container .lamp-box {
   /*for boxing lamp*/
-  position: absolute;
   width: 120px;
   height: 120px;
-  /* border: 1px solid #222; */
   border-radius: 10px;
-  background-color: #917a67;
+  /* background-color: #917a67; */
+  background-color: #3eb7b5;
+  border: solid 1px #4d8d79;
   z-index: -3;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @keyframes turnOnLamp {

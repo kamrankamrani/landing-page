@@ -4,15 +4,18 @@ import "./Style/style.css";
 
 export default function TextMessageWidget() {
   const [textMessageEl, setTextMessageEl] = useState<HTMLElement | null>(null);
-  const lampIsOn = useAppSelector(
+  const onScreenLampClicked = useAppSelector(
     (state) => state.widgetSlice.onScreenLampIsOn
+  );
+  const onScreenFlowerClicked = useAppSelector(
+    (state) => state.widgetSlice.onScreenFlowerClicked
   );
   const isSmallScreen = useAppSelector(
     (state) => state.screenSize.isSmallScreen
   );
 
   useEffect(() => {
-    if (!lampIsOn) {
+    if (!onScreenLampClicked || !onScreenFlowerClicked) {
       if (!isSmallScreen) {
         //just animate for big screens
         if (textMessageEl) {
@@ -22,7 +25,7 @@ export default function TextMessageWidget() {
           }, 1400);
         }
       }
-    } else if (lampIsOn) {
+    } else if (onScreenLampClicked || onScreenFlowerClicked) {
       if (!isSmallScreen) {
         //just animate for big screens
         if (textMessageEl) {
@@ -33,7 +36,7 @@ export default function TextMessageWidget() {
         }
       }
     }
-  }, [lampIsOn]);
+  }, [onScreenLampClicked, onScreenFlowerClicked]);
 
   useEffect(() => {
     const textMEl_: HTMLElement | null =

@@ -2,50 +2,42 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 interface widgetSliceType {
-  mobileLampClick: boolean;
-  // lampElement: HTMLElement | null;
   lampIsOn: boolean;
   onScreenLampIsOn: boolean;
-  textMessageElemnt: string;
+  onScreenFlowerClicked: boolean;
+  isRain: boolean;
 }
 
 const initialState: widgetSliceType = {
-  mobileLampClick: false,
-  // lampElement: null,
   lampIsOn: false,
-  textMessageElemnt: "",
   onScreenLampIsOn: false,
+  onScreenFlowerClicked: false,
+  isRain: false,
 };
 
 const widgetSlice = createSlice({
   name: "widgetSlice",
   initialState,
   reducers: {
-    setMobileLampClick(state, action: PayloadAction<boolean>) {
-      state.mobileLampClick = action.payload;
-    },
     setlampIsOn(state, action: PayloadAction<boolean>) {
       state.lampIsOn = action.payload;
     },
-    setTextMessageElement(state, action: PayloadAction<string>) {
-      state.textMessageElemnt = action.payload;
-    },
-    // setLampElement(state, action: PayloadAction<HTMLElement | null>) {
-    //   if (action.payload !== null) {
-    //     state.lampElement = action.payload;
-    //   }
-    // },
     setOnScreenLampIsOn(state, action: PayloadAction<boolean>) {
       state.onScreenLampIsOn = action.payload;
+    },
+    setOnScreenFlowerClicked(state, action: PayloadAction<boolean>) {
+      state.onScreenFlowerClicked = action.payload;
+    },
+    setIsRain(state, action: PayloadAction<boolean>) {
+      state.isRain = action.payload;
     },
   },
 });
 
 export default widgetSlice.reducer;
 export const {
-  setMobileLampClick,
+  setIsRain,
+  setOnScreenFlowerClicked,
   setlampIsOn,
-  setTextMessageElement,
-  // setLampElement,
   setOnScreenLampIsOn,
 } = widgetSlice.actions;

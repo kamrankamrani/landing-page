@@ -1,5 +1,17 @@
 .big-phone-container {
   padding: 40px;
+  position: relative;
+}
+
+.toolbar-notify-container {
+  position: absolute;
+  top: 0px;
+}
+
+.toolbar-sms-container {
+  position: absolute;
+  left: -45px;
+  top: 100px;
 }
 
 .big-phone {
@@ -15,6 +27,9 @@
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .big-phone .phone-header {
@@ -101,4 +116,11 @@
 .big-phone-icons.profile {
   font-size: 30px;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .toolbar-sms-container {
+    left: 135px;
+    top: 225px;
+  }
 }
