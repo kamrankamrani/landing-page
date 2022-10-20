@@ -29,23 +29,24 @@
   transform: scale(0, 1);
 }
 
-.visible {
+.little-toolbar.visible {
   animation: growToolbar 500ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
   animation-delay: 2000ms;
 }
 
-.hidden {
+.little-toolbar.hidden {
   animation: hideToolbar 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 .sms-visible {
-  animation: sendSmsGrow 200ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation: sendSmsGrow 1400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-delay: 50ms;
 }
 
-.sms-hidden {
-  animation: sendSmsGrow 200ms cubic-bezier(0.075, 0.82, 0.165, 1) reverse
+/* .sms-hidden {
+  animation: sendSmsGrow 1400ms cubic-bezier(0.075, 0.82, 0.165, 1) reverse
     forwards;
-}
+} */
 
 .little-toolbar::before {
   position: absolute;
@@ -83,27 +84,40 @@
 }
 
 @keyframes sendSmsGrow {
-  from {
+  0% {
     transform: scale(0, 1);
   }
-  to {
-    transform: scale(1);
+  15% {
+    transform: scale(1, 1);
+  }
+  85% {
+    transform: scale(1, 1);
   }
 }
 
 @media screen and (max-width: 600px) {
   .little-sms-toolbar {
     transform: scale(1, 0);
+    transform-origin: top center;
     border-radius: 0px 0px 10px 10px;
     padding: 20px 5px 5px 5px;
   }
 
   @keyframes sendSmsGrow {
-    from {
+    0% {
       transform: scale(1, 0);
     }
-    to {
-      transform: scale(1);
+    15% {
+      transform: scale(1, 1);
     }
+    85% {
+      transform: scale(1, 1);
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .little-sms-toolbar {
+    display: none;
   }
 }

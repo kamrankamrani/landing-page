@@ -10,31 +10,13 @@ export default function TextMessageWidget() {
   const onScreenFlowerClicked = useAppSelector(
     (state) => state.widgetSlice.onScreenFlowerClicked
   );
-  const isSmallScreen = useAppSelector(
-    (state) => state.screenSize.isSmallScreen
-  );
 
   useEffect(() => {
-    if (!onScreenLampClicked || !onScreenFlowerClicked) {
-      if (!isSmallScreen) {
-        //just animate for big screens
-        if (textMessageEl) {
-          textMessageEl.classList.add("animate");
-          setTimeout(() => {
-            textMessageEl.classList.remove("animate");
-          }, 1400);
-        }
-      }
-    } else if (onScreenLampClicked || onScreenFlowerClicked) {
-      if (!isSmallScreen) {
-        //just animate for big screens
-        if (textMessageEl) {
-          textMessageEl.classList.add("animate");
-          setTimeout(() => {
-            textMessageEl.classList.remove("animate");
-          }, 1400);
-        }
-      }
+    if (textMessageEl) {
+      textMessageEl.classList.add("animate");
+      setTimeout(() => {
+        textMessageEl.classList.remove("animate");
+      }, 1400);
     }
   }, [onScreenLampClicked, onScreenFlowerClicked]);
 

@@ -41,3 +41,10 @@
     right: 100%;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .message-container {
+    flex-grow: 0;
+    display: none;
+  }
+}

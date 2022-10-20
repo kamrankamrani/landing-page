@@ -68,7 +68,7 @@
 }
 
 .flower-rotate-animation {
-  animation: flowerRotate 2500ms linear infinite;
+  animation: flowerRotate 3s linear infinite;
 }
 
 .flower > div {
@@ -79,7 +79,6 @@
   width: 40px;
   height: 40px;
   z-index: -3;
-  /* transform-origin: 20px 35px; */
 }
 
 .flower > div :nth-of-type(1) {
