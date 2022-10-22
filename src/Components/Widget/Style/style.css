@@ -1,18 +1,15 @@
 .main-gadget-container {
   display: flex;
-  /* background: linear-gradient(#b79981, #a6806a); */
-  /* background: linear-gradient(#8bad91, #3eb7b5); */
-  /* background: radial-gradient(circle, #8bad91, #3eb7b5); */
-  /* background-color: #3eb7b5; */
-  /* border: 1px solid #3eb7b5; */
-  background-image: linear-gradient(
+  background-color: #f8f8f8;
+  border: 1px solid #212121;
+  /* background-image: linear-gradient(
     to right bottom,
     #addab5,
     #95d2b2,
     #7bc9b1,
     #5fc0b3,
     #3eb7b5
-  );
+  ); */
   z-index: -5;
   border-radius: 20px;
   padding: 20px;

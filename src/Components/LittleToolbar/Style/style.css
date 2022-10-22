@@ -6,13 +6,14 @@
 
 .little-toolbar {
   position: relative;
-  background-color: #f3f3f3;
+  background-color: #4d8d79;
   border-radius: 20px;
   min-width: 40px;
   min-height: 10px;
   padding: 5px 10px;
   transform-origin: left center;
   transform: scale(0, 0);
+  color: #f3f3f3;
 }
 
 .little-sms-toolbar {
@@ -20,13 +21,14 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #f3f3f3;
+  background-color: #4d8d79; /* last one is #3eb7b5*/
   border-radius: 10px 0px 0px 10px;
   min-width: 40px;
   min-height: 10px;
   padding: 5px 20px 5px 5px;
   transform-origin: right center;
   transform: scale(0, 1);
+  color: #f3f3f3;
 }
 
 .little-toolbar.visible {
@@ -43,18 +45,13 @@
   animation-delay: 50ms;
 }
 
-/* .sms-hidden {
-  animation: sendSmsGrow 1400ms cubic-bezier(0.075, 0.82, 0.165, 1) reverse
-    forwards;
-} */
-
 .little-toolbar::before {
   position: absolute;
   content: "";
   width: 0;
   height: 0;
   border: 10px solid transparent;
-  border-top-color: #f3f3f3;
+  border-top-color: #4d8d79;
   bottom: -17px;
   left: 10px;
 }

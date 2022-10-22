@@ -6,10 +6,11 @@
 }
 
 .footer-container {
-  /* background-color: #3d7090; */
-  background-color: #e5e7e9;
+  background-color: #3d7090;
+  /* background-color: #e5e7e9; */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-top: 20px;
 }

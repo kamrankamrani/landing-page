@@ -1,3 +1,16 @@
+.club-signup-form-main-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.club-signupform-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
 .form-input {
   width: 100%;
   height: 40px;
@@ -79,6 +92,28 @@
 .success-button-animate {
   animation: successButtonAnimate 1s cubic-bezier(0.075, 0.82, 0.165, 1)
     forwards;
+}
+
+.form-error-text-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: Vazirmatn, sans-serif;
+  direction: rtl;
+  font-size: small;
+  color: #ed4337;
+  padding-right: 10px;
+  visibility: hidden;
+}
+
+.form-error-text-container p {
+  padding: 0px 5px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+
+.form-error-text-container.visible {
+  visibility: visible;
 }
 
 @keyframes successButtonAnimate {

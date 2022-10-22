@@ -3,12 +3,14 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: row-reverse;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px 0px 0px;
   overflow-x: scroll;
   scrollbar-width: thin; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
-  background-color: #f1f1f1;
-  border-radius: 10px;
+  /* background-color: #f1f1f1; */
+  background-color: #f8f8f8;
+  border: 1px solid #212121;
+  border-radius: 20px;
   flex-wrap: nowrap;
 }
 
@@ -64,7 +66,7 @@ span {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: blueviolet;
+  background-color: #3eb7b5;
   bottom: -35px;
   position: absolute;
   display: flex;
