@@ -45,7 +45,14 @@ export default function Comments() {
     return;
   };
 
+  const sortComments = () => {
+    const sortedArray = commentSource.slice();
+    sortedArray.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
+    console.log("indexes ", sortedArray);
+  };
+
   useEffect(() => {
+    sortComments();
     dispatch(setComments(commentSource));
     const el_ = document.querySelector(".comments-container") as HTMLElement;
     if (el_) {
