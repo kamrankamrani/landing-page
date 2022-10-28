@@ -47,13 +47,15 @@ export default function Comments() {
 
   const sortComments = () => {
     const sortedArray = commentSource.slice();
-    sortedArray.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
-    console.log("indexes ", sortedArray);
+    sortedArray.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+    return sortedArray;
   };
 
   useEffect(() => {
-    sortComments();
-    dispatch(setComments(commentSource));
+    if (commentSource.length) {
+      const sortedArray_ = sortComments().slice();
+      dispatch(setComments(sortedArray_));
+    }
     const el_ = document.querySelector(".comments-container") as HTMLElement;
     if (el_) {
       setSliderEl(el_);

@@ -3,6 +3,7 @@
   flex-direction: row-reverse;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 15px;
   min-height: 45px;
+  background-color: #fdfdfd;
 }
 
 .menu-container {

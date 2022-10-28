@@ -1,0 +1,48 @@
+.icon-features-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  color: #212121;
+  flex-direction: row-reverse;
+  column-gap: 10px;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.icon-item .icon-wrapper {
+  border: solid #3d7090 2px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.icon-item .icon {
+  color: #3d7090;
+}
+
+.icon-item p {
+  font-size: 16px;
+  color: #3a3a3a;
+}
+
+.icons-container-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .icon-item p {
+    font-size: 14px;
+  }
+}

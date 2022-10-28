@@ -1,0 +1,62 @@
+.banner-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: Vazirmatn, sans-serif;
+  font-size: 2rem;
+  color: #212121;
+  flex-direction: row-reverse;
+  column-gap: 20px;
+}
+
+.banner-text-container .blue {
+  color: #3eb7b5;
+}
+
+.banner-text-container .ball {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background-color: #3eb7b5;
+  animation: bouncing 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+.banner-text-container .underline {
+  position: absolute;
+  width: calc(100% + 20px);
+  height: 3px;
+  background-color: #3eb7b5;
+  bottom: -6px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: underlineAnimation 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation-delay: 1400ms;
+}
+
+@keyframes underlineAnimation {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes bouncing {
+  0% {
+    transform: scale(1, 1);
+    bottom: 0;
+  }
+  50% {
+    transform: scale(1, 1.2);
+    bottom: 20px;
+  }
+  100% {
+    transform: scale(0);
+    bottom: -10px;
+  }
+}

@@ -1,7 +1,7 @@
 .main-gadget-container {
   display: flex;
-  background-color: #f8f8f8;
-  border: 1px solid #212121;
+  background-color: #fdfdfd;
+  /* border: 1px solid #212121; */
   /* background-image: linear-gradient(
     to right bottom,
     #addab5,
@@ -14,6 +14,9 @@
   border-radius: 20px;
   padding: 20px;
   flex-direction: row;
+  /* box-shadow: rgba(17, 12, 46, 0.15) 0px 0px 100px 0px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .lamp-flower-parent-container {
