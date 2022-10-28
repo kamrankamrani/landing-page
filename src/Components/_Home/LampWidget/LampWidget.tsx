@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../hooks";
+import { useAppSelector } from "../../../hooks";
 import { useEffect, useState } from "react";
 import "./Style/style.css";
 

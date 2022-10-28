@@ -4,8 +4,8 @@ import {
   setlampIsOn,
   setOnScreenFlowerClicked,
   setOnScreenLampIsOn,
-} from "../../features/widgetSlice/widgetSlice";
-import { useAppDispatch } from "../../hooks";
+} from "../../../features/widgetSlice/widgetSlice";
+import { useAppDispatch } from "../../../hooks";
 import Switch from "../Switch/Switch";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LocalFloristIcon from "@mui/icons-material/LocalFlorist";

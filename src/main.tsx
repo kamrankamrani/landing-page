@@ -4,8 +4,8 @@ import App from "./Components/App/App";
 import "vazirmatn/Vazirmatn-font-face.css";
 import { StyledEngineProvider } from "@mui/material";
 import { ThemeProvider } from "@mui/system";
-import GlobalTheme from "./Components/GlobalTheme/GlobalTheme";
 import { Provider } from "react-redux";
+import GlobalTheme from "./Components/_Home/GlobalTheme/GlobalTheme";
 import { store } from "./store";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

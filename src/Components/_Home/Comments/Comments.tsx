@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { Grid, Typography } from "@mui/material";
 import { useEffect, useState, useRef } from "react";
-import { setComments } from "../../features/commentsSlice/commentsSlice";
-import { useAppDispatch, useAppSelector } from "../../hooks";
-import { NumToPersian } from "../../Services/ConvertNumber";
-import { commentType } from "../../Services/Types";
+import { setComments } from "../../../features/commentsSlice/commentsSlice";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { NumToPersian } from "../../../Services/ConvertNumber";
+import { commentType } from "../../../Services/Types";
 import commentSource from "./CommentSource";
 import "./Style/comments.css";
 

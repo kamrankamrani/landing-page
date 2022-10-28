@@ -1,4 +1,4 @@
-import { commentType } from "../../Services/Types";
+import { commentType } from "../../../Services/Types";
 
 const commentSource: commentType[] = [
   {

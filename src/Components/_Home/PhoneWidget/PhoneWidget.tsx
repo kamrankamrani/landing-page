@@ -4,8 +4,8 @@ import { Typography } from "@mui/material";
 import {
   setlampIsOn,
   setOnScreenLampIsOn,
-} from "../../features/widgetSlice/widgetSlice";
-import { useAppDispatch, useAppSelector } from "../../hooks";
+} from "../../../features/widgetSlice/widgetSlice";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
 import "./Style/style.css";
 
 export default function PhoneWidget() {

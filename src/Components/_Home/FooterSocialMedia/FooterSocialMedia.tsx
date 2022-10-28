@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import { NumToPersian } from "../../Services/ConvertNumber";
+import { NumToPersian } from "../../../Services/ConvertNumber";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";

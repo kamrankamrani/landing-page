@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import ZarinPalLogo from "../../assets/zarinpal.svg";
+import ZarinPalLogo from "../../../assets/zarinpal.svg";
 import "./Style/style.css";
 
 export default function FooterSymbols() {

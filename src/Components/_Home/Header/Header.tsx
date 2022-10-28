@@ -1,17 +1,35 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Grid, Typography } from "@mui/material";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
-import "./Style/style.css";
-import { useAppDispatch, useAppSelector } from "../../hooks";
+import LogoSvg from "../../../assets/logo.svg";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { setScreenSmallSize } from "../../features/screenSizeSlice/screenSizeSlice";
+import { setScreenSmallSize } from "../../../features/screenSizeSlice/screenSizeSlice";
 import DehazeRoundedIcon from "@mui/icons-material/DehazeRounded";
+import { useNavigate } from "react-router-dom";
+import "./Style/style.css";
 
 export default function Header() {
   const smallScreen = useAppSelector((state) => state.screenSize.isSmallScreen);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const matchScreen = useMediaQuery("(max-width:600px)");
   dispatch(setScreenSmallSize(matchScreen));
+
+  const handleHeaderClick = (value: string) => {
+    switch (value) {
+      case "solutions":
+        navigate("/solutions");
+        break;
+      case "home":
+        navigate("/");
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <Grid container className="header-container">
@@ -20,7 +38,10 @@ export default function Header() {
           <div className="menu-container">
             <Typography className="text">فروشگاه</Typography>
           </div>
-          <div className="menu-container">
+          <div
+            className="menu-container"
+            onClick={() => handleHeaderClick("solutions")}
+          >
             <Typography className="text">راه کار ها</Typography>
           </div>
           <div className="menu-container dropdown-menu">
@@ -38,6 +59,11 @@ export default function Header() {
           </div>
           <div className="menu-container">
             <Typography className="text">ویستو پلاس</Typography>
+          </div>
+          <div className="header-home-container">
+            <div className="home" onClick={() => handleHeaderClick("home")}>
+              <img src={LogoSvg} alt="header-logo" />
+            </div>
           </div>
         </React.Fragment>
       ) : (

@@ -74,3 +74,16 @@
 .dropdown-content p:hover {
   color: #575757;
 }
+
+.header-home-container {
+  justify-self: flex-start;
+  flex-grow: 0.3;
+  display: flex;
+  align-items: center;
+}
+
+.header-home-container .home {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
