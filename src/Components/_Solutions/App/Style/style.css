@@ -1,0 +1,7 @@
+.solutions-container {
+  margin-top: 20px;
+  display: flex;
+  direction: rtl;
+  padding: 20px;
+  flex-direction: column;
+}
