@@ -1,0 +1,7 @@
+.store-container {
+  flex-grow: 1;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+}

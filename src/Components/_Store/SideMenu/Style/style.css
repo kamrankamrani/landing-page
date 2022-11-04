@@ -1,0 +1,114 @@
+.store-sidemenu-container {
+  min-height: 100vh;
+  margin: 50px 0px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.store-sidemenu-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 10px 10px 20px;
+  background-color: #fdfdfd;
+  box-shadow: rgba(100, 100, 111, 0.2) -7px 0px 29px 0px;
+  transform-origin: right center;
+  height: 100%;
+}
+
+.store-sidemenu-container .toggle-menu {
+  background-color: #fdfdfd;
+  color: #369e9c;
+  border-radius: 50% 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) -7px 0px 29px 0px;
+  position: absolute;
+  top: -25px;
+  right: 0;
+  z-index: 2;
+}
+
+.store-sidemenu-wrapper hr {
+  border: none;
+  border-top: solid 1px #474747;
+  width: 90%;
+}
+
+.store-sidemenu-container .title {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fdfdfd;
+  background-color: #369e9c;
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 10px;
+  top: 0;
+}
+
+.store-sidemenu-container .menu-detail {
+  direction: rtl;
+  padding-top: 20px;
+}
+
+.store-sidemenu-container .menu-detail li {
+  margin: 10px 0px;
+}
+
+.menu-detail optgroup {
+  background-color: #fdfdfd;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.menu-detail .detail {
+  color: #212121;
+  cursor: pointer;
+}
+
+.menu-detail .detail:hover {
+  color: #616161;
+}
+
+.hide-store-sidemenu {
+  animation: hideStoreSideMenu 200ms cubic-bezier(0.075, 0.82, 0.165, 1)
+    forwards;
+}
+
+.show-store-sidemenu {
+  animation: showStoreSideMenu 200ms cubic-bezier(0.075, 0.82, 0.165, 1)
+    forwards;
+}
+
+.store-sidemenu-wrapper.hide {
+  transform: scaleX(0);
+  display: none;
+}
+
+.store-sidemenu-wrapper.show {
+  transform: scaleX(1);
+  display: flex;
+}
+
+@keyframes hideStoreSideMenu {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes showStoreSideMenu {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import commentsSlice from "./features/commentsSlice/commentsSlice";
 import screenSizeReducer from "./features/screenSizeSlice/screenSizeSlice";
+import storeSlice from "./features/storeSlice/storeSlice";
 import widgetSlice from "./features/widgetSlice/widgetSlice";
 
 export const store = configureStore({
@@ -8,6 +9,7 @@ export const store = configureStore({
     screenSize: screenSizeReducer,
     commentsSlice: commentsSlice,
     widgetSlice: widgetSlice,
+    storeSlice: storeSlice,
   },
 });
 

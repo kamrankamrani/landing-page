@@ -3,6 +3,7 @@ import Home from "../_Home/Home/Home";
 import SolutionsApp from "../_Solutions/App/App";
 import { useState, useEffect } from "react";
 import "./Style/style.css";
+import StoreApp from "../_Store/App/App";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -30,6 +31,7 @@ export default function AnimatedRoutes() {
       <Routes location={displayLocation}>
         <Route path="/" element={<Home />} />
         <Route path="/solutions" element={<SolutionsApp />} />
+        <Route path="/store" element={<StoreApp />} />
       </Routes>
     </div>
   );

@@ -26,6 +26,9 @@ export default function Header() {
       case "home":
         navigate("/");
         break;
+      case "store":
+        navigate("/store");
+        break;
       default:
         break;
     }
@@ -35,7 +38,10 @@ export default function Header() {
     <Grid container className="header-container">
       {!smallScreen ? (
         <React.Fragment>
-          <div className="menu-container">
+          <div
+            className="menu-container"
+            onClick={() => handleHeaderClick("store")}
+          >
             <Typography className="text">فروشگاه</Typography>
           </div>
           <div

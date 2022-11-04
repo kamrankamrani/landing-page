@@ -13,6 +13,12 @@ export default function SolutionsTopPhoto() {
         <div>
           <Typography>صرفه جویی در زمان</Typography>
         </div>
+        <div>
+          <Typography>آمپر دهی بالا</Typography>
+        </div>
+        <div>
+          <Typography>کارکرد با پیامک</Typography>
+        </div>
       </div>
     </div>
   );

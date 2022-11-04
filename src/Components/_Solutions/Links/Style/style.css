@@ -1,0 +1,30 @@
+.solutions-link-container {
+  margin-top: 50px;
+}
+
+.solutions-link-container .links-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+.solutions-link-container .links-container .icon-container {
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: solid 2px #369e9c;
+  background-color: #3eb7b5;
+  color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .solutions-link-container .links-container {
+    justify-content: space-between;
+    column-gap: 0;
+  }
+}

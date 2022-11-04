@@ -1,3 +1,5 @@
+import Links from "../Links/Links";
+import MainText from "../MainText/MainText";
 import PrefaceText from "../PrefaceText/PrefaceText";
 import SolutionsTopPhoto from "../SolutionsTopPhoto/SolutionsTopPhoto";
 import TitleText from "../TitleText/TitleText";
@@ -9,6 +11,8 @@ export default function SolutionsApp() {
       <TitleText />
       <PrefaceText />
       <SolutionsTopPhoto />
+      <MainText />
+      <Links />
     </div>
   );
 }

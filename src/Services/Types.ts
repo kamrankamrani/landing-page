@@ -3,3 +3,7 @@ export interface commentType {
   text: string;
   date: string;
 }
+
+export interface StoreDataType {
+  defaultImageUrl: string;
+}
