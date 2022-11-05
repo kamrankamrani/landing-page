@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { useAppSelector } from "../../../hooks";
 import { NumToPersian } from "../../../Services/ConvertNumber";
+import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import "./Style/style.css";
 
 export default function StoreSuggtion() {
@@ -22,13 +23,22 @@ export default function StoreSuggtion() {
       rawPrice: "1750000",
       imageUrl: "",
     },
+    {
+      description: "شیر برقی 1/2 اینچ",
+      off: "15",
+      rawPrice: "460000",
+      imageUrl: "",
+    },
   ];
 
   return (
-    <div className="store-suggtion-container">
-      <div>
+    <div className="store-suggestion-container">
+      <div className="title">
+        <Typography>پیشنهاد های</Typography>
         <Typography>شگفت انگیز!</Typography>
-        <button>مشاهده همه</button>
+        <button>
+          مشاهده همه <KeyboardArrowLeftRoundedIcon fontSize="small" />
+        </button>
       </div>
       <div className="cards-container">
         {dailyOffData.map((value, index) => {
@@ -45,16 +55,18 @@ export default function StoreSuggtion() {
               <div className="price-container">
                 <div>
                   <Typography variant="body1" className="off-text">
-                    {NumToPersian(value.rawPrice)}
+                    {NumToPersian(Number(value.rawPrice).toLocaleString())}{" "}
+                    تومان
                   </Typography>
                   <Typography variant="body1" style={{ fontSize: "medium" }}>
                     {NumToPersian(
-                      Number(value.rawPrice) * (1 - Number(value.off) / 100)
-                    )}
+                      (
+                        Number(value.rawPrice) *
+                        (1 - Number(value.off) / 100)
+                      ).toLocaleString()
+                    )}{" "}
+                    تومان
                   </Typography>
-                </div>
-                <div>
-                  <Typography variant="body1">قیمت :</Typography>
                 </div>
               </div>
             </div>
