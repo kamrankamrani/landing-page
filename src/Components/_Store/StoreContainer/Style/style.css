@@ -1,6 +1,14 @@
 .store-container {
   flex-grow: 1;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .store-container {
+    position: relative;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
 }

@@ -2,11 +2,12 @@
   display: flex;
   padding: 20px;
   border-radius: 10px;
-  background-color: #3d7090;
   height: fit-content;
   flex-direction: row-reverse;
-  flex-grow: 1;
-  /* overflow-x: scroll; */
+  background-color: #3d7090;
+  background-image: url("../../../../assets/backgroundSquare.svg");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .store-suggestion-container .title {
@@ -34,13 +35,18 @@
   border: none;
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+
+.store-suggestion-container .title button:active {
+  background-color: #cecece;
 }
 
 .store-suggestion-container .cards-container {
   display: flex;
   justify-content: right;
   margin-right: 20px;
-  column-gap: 10px;
+  column-gap: 5px;
 }
 
 .store-suggestion-container .cards-container .card {
@@ -78,6 +84,7 @@
 .store-suggestion-container .cards-container img {
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 
 .store-suggestion-container .price-container {
@@ -85,6 +92,33 @@
   align-items: center;
   column-gap: 10px;
   direction: rtl;
+  cursor: pointer;
+  position: relative;
+}
+
+.store-suggestion-container .price-container .shop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 10px;
+  transform-origin: right center;
+  transform: scaleX(0);
+  transition: all 100ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-decoration: underline #d2042d 2px;
+  text-underline-offset: 10px;
+}
+
+.store-suggestion-container .price-container:hover .shop {
+  transform: scaleX(1);
+}
+
+.store-suggestion-container .price-container .shop p:hover {
+  color: #d2042d;
 }
 
 .store-suggestion-container .price-container p {
@@ -135,5 +169,10 @@
 
   .store-suggestion-container .title button svg {
     transform: rotate(-90deg);
+  }
+
+  .store-suggestion-container {
+    overflow-x: scroll;
+    scrollbar-width: thin;
   }
 }

@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import { useAppSelector } from "../../../hooks";
 import { NumToPersian } from "../../../Services/ConvertNumber";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import "./Style/style.css";
 
 export default function StoreSuggtion() {
@@ -53,6 +54,10 @@ export default function StoreSuggtion() {
                 <img src={value.imageUrl || defaultImage} alt="suggest-pic" />
               </div>
               <div className="price-container">
+                <div className="shop">
+                  <ShoppingBagOutlinedIcon style={{ color: "#d2042d" }} />
+                  <Typography>خرید آنلاین</Typography>
+                </div>
                 <div>
                   <Typography variant="body1" className="off-text">
                     {NumToPersian(Number(value.rawPrice).toLocaleString())}{" "}

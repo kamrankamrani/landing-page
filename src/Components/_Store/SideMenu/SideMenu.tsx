@@ -3,7 +3,7 @@
 import { Typography } from "@mui/material";
 import CategoryIcon from "@mui/icons-material/Category";
 import CloseIcon from "@mui/icons-material/Close";
-import LocalMallIcon from "@mui/icons-material/LocalMall";
+import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import "./Style/style.css";
 import { useEffect, useState } from "react";
 import { useAppSelector } from "../../../hooks";
@@ -64,7 +64,7 @@ export default function SideMenu() {
   return (
     <div className="store-sidemenu-container">
       <div className="toggle-menu" onClick={handleToggleMenu}>
-        {!isHide ? <CloseIcon /> : <LocalMallIcon />}
+        {!isHide ? <CloseIcon /> : <WidgetsOutlinedIcon />}
       </div>
       <div
         id="store-side-menu"
