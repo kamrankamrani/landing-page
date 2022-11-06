@@ -7,7 +7,7 @@ import "./Style/style.css";
 
 export default function StoreSuggtion() {
   const defaultImage = useAppSelector(
-    (state) => state.storeSlice.defaultImageUrl
+    (state) => state.shopSlice.defaultImageUrl
   );
 
   interface dailyOffDataType {

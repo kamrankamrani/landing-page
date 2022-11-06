@@ -12,7 +12,7 @@ export default function SideMenu() {
   const [isHide, setIsHide] = useState(false);
   const [sideMenuEl, setSideMenuEl] = useState<HTMLElement | null>(null);
   const isSmallScreen = useAppSelector(
-    (state) => state.screenSize.isSmallScreen
+    (state) => state.screenSize.isMiddleScreen
   );
 
   useEffect(() => {

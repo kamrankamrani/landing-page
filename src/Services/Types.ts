@@ -4,6 +4,12 @@ export interface commentType {
   date: string;
 }
 
-export interface StoreDataType {
+export interface ShopDataType {
   defaultImageUrl: string;
+  searchFromMenuValue: string;
+}
+
+export interface screenSizeSliceType {
+  isSmallScreen: boolean;
+  isMiddleScreen: boolean;
 }

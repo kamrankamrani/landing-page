@@ -6,7 +6,10 @@ import LogoSvg from "../../../assets/logo.svg";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { setScreenSmallSize } from "../../../features/screenSizeSlice/screenSizeSlice";
+import {
+  setScreenMiddleSize,
+  setScreenSmallSize,
+} from "../../../features/screenSizeSlice/screenSizeSlice";
 import DehazeRoundedIcon from "@mui/icons-material/DehazeRounded";
 import { useNavigate } from "react-router-dom";
 import "./Style/style.css";
@@ -15,8 +18,10 @@ export default function Header() {
   const smallScreen = useAppSelector((state) => state.screenSize.isSmallScreen);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const matchScreen = useMediaQuery("(max-width:600px)");
-  dispatch(setScreenSmallSize(matchScreen));
+  const matchSmallScreen = useMediaQuery("(max-width:600px)");
+  const matchMiddleScreen = useMediaQuery("(max-width:792px)");
+  dispatch(setScreenSmallSize(matchSmallScreen));
+  dispatch(setScreenMiddleSize(matchMiddleScreen));
 
   const handleHeaderClick = (value: string) => {
     switch (value) {
