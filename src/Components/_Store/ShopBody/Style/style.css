@@ -1,0 +1,109 @@
+.shop-body-container {
+  padding: 5px;
+}
+
+.shop-body-container .items-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.shop-body-container .item-container {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.shop-body-container .item {
+  cursor: pointer;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  row-gap: 15px;
+}
+
+.shop-body-container .item .off-container {
+  display: flex;
+  align-self: flex-start;
+  min-height: 20px;
+}
+
+.shop-body-container .item .off {
+  background-color: #d2042d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.shop-body-container .item .off span {
+  padding: 0px 5px;
+}
+
+.shop-body-container .item img {
+  width: auto;
+  height: 150px;
+}
+
+.shop-body-container .item .description {
+  padding: 0px 10px;
+  color: #303030;
+  text-align: right;
+  align-self: flex-end;
+}
+
+.shop-body-container .no-product {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+  margin-top: 20px;
+  border-radius: 20px;
+  direction: rtl;
+  column-gap: 5px;
+  color: #212121;
+}
+
+.shop-body-container .no-product svg {
+  color: #212121;
+}
+
+.shop-body-container .item .price-container {
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.shop-body-container .item .price-container .item-off {
+  color: #303030;
+  opacity: 0.7;
+  text-decoration: line-through;
+  min-height: 20px;
+}
+
+.shop-body-container .item .price-container .price {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: center;
+}
+
+.shop-body-container .product-detail-button {
+  /* background-color: #3d7090; */
+  color: #212121;
+  border: solid #303030 1px;
+  border-radius: 15px;
+}
+
+.shop-body-container .item:hover .product-detail-button {
+  background-color: #3d7090;
+  color: #f8f8f8;
+  border: #3d7090 solid 1px;
+}

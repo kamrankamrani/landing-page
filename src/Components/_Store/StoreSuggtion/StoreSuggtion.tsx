@@ -4,18 +4,12 @@ import { NumToPersian } from "../../../Services/ConvertNumber";
 import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import "./Style/style.css";
+import { dailyOffDataType } from "../../../Services/Types";
 
 export default function StoreSuggtion() {
   const defaultImage = useAppSelector(
     (state) => state.shopSlice.defaultImageUrl
   );
-
-  interface dailyOffDataType {
-    description: string;
-    off: string;
-    rawPrice: string;
-    imageUrl: string;
-  }
 
   const dailyOffData: dailyOffDataType[] = [
     {
