@@ -4,6 +4,7 @@ import SolutionsApp from "../_Solutions/App/App";
 import { useState, useEffect } from "react";
 import "./Style/style.css";
 import StoreApp from "../_Store/App/App";
+import Detail from "../_Store/Detail/Detail";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -30,8 +31,9 @@ export default function AnimatedRoutes() {
     >
       <Routes location={displayLocation}>
         <Route path="/" element={<Home />} />
-        <Route path="/solutions" element={<SolutionsApp />} />
-        <Route path="/store" element={<StoreApp />} />
+        <Route path="solutions" element={<SolutionsApp />} />
+        <Route path="store" element={<StoreApp />} />
+        <Route path="store/detail" element={<Detail />} />
       </Routes>
     </div>
   );

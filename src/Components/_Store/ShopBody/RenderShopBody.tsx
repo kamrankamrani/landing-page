@@ -4,14 +4,20 @@ import { NumToPersian } from "../../../Services/ConvertNumber";
 import { ShopItemsDataTypes } from "../../../Services/Types";
 import ErrorOutlineRoundedIcon from "@mui/icons-material/ErrorOutlineRounded";
 import "./Style/style.css";
+import { useNavigate } from "react-router-dom";
 
 export default function RenderShopBody() {
+  const navigate = useNavigate();
   const shopBodyData: ShopItemsDataTypes[] = useAppSelector(
     (state) => state.shopSlice.shopBodyItems
   );
   const defaultImage = useAppSelector(
     (state) => state.shopSlice.defaultImageUrl
   );
+
+  const handleDetailClick = () => {
+    navigate("./detail");
+  };
 
   return (
     <Grid container className="items-wrapper">
@@ -61,7 +67,10 @@ export default function RenderShopBody() {
                       )}{" "}
                       تومان
                     </Typography>
-                    <Button className="product-detail-button">
+                    <Button
+                      onClick={handleDetailClick}
+                      className="product-detail-button"
+                    >
                       <Typography variant="caption">جزئیات بیشتر</Typography>
                     </Button>
                   </div>

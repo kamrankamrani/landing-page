@@ -1,0 +1,10 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.upper-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
