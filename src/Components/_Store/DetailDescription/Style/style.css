@@ -1,0 +1,65 @@
+.detail-container .desc-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  border-radius: 10px;
+  border: solid 1px rgba(61, 112, 144, 0.4);
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.desc-container .title-container {
+  display: flex;
+  direction: rtl;
+  padding: 0px 10px;
+}
+
+.desc-container .price-container {
+  display: flex;
+  direction: rtl;
+  padding: 20px 10px;
+}
+
+.desc-container .price-container p {
+  color: #cb2d58;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.desc-container .button-container {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.desc-container .button {
+  width: 90%;
+  background-color: #3d7090;
+  color: #f9f9f9;
+}
+
+.desc-container .button:hover {
+  background-color: #4683a8;
+}
+
+.desc-container .exist-container {
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.desc-container .exist-container div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.exist-container .green {
+  background-color: green;
+}
+
+.exist-container .red {
+  background-color: red;
+}
