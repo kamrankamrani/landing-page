@@ -1,0 +1,14 @@
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.tabs-container .tabs {
+  flex-direction: row-reverse;
+}
+
+.tabs-container .tab-header {
+  background-color: aqua;
+}

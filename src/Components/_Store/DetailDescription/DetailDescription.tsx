@@ -1,5 +1,8 @@
 import { Grid, Typography, Button } from "@mui/material";
 import { NumToPersian } from "../../../Services/ConvertNumber";
+import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
+import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
+import BuildRoundedIcon from "@mui/icons-material/BuildRounded";
 import "./Style/style.css";
 
 export default function DetailDescription() {
@@ -27,6 +30,21 @@ export default function DetailDescription() {
         <Typography variant="caption">{`${
           mockExist ? "موجود در انبار" : "نا موجود"
         }`}</Typography>
+      </Grid>
+      <hr />
+      <Grid container className="icons-container">
+        <div className="icon">
+          <PhoneIphoneRoundedIcon fontSize="small" />
+          <Typography variant="caption">اپلیکیشن فارسی</Typography>
+        </div>
+        <div className="icon">
+          <LocalShippingRoundedIcon />
+          <Typography variant="caption">ارسال رایگان</Typography>
+        </div>
+        <div className="icon right">
+          <BuildRoundedIcon />
+          <Typography variant="caption"> ۲ سال گارانتی</Typography>
+        </div>
       </Grid>
     </Grid>
   );

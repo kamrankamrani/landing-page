@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import DetailDescription from "../DetailDescription/DetailDescription";
 import ImagesSlider from "../ImagesSlider/ImagesSlider";
 import IndexImage from "../IndexImage/IndexImage";
+import TabsMenu from "../TabsMenu/TabsMenu";
 import "./Style/style.css";
 
 export default function Detail() {
@@ -16,6 +17,7 @@ export default function Detail() {
           <DetailDescription />
         </Grid>
       </Grid>
+      <TabsMenu />
     </div>
   );
 }

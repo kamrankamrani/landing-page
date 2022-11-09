@@ -6,7 +6,7 @@
   border-radius: 10px;
   border: solid 1px rgba(61, 112, 144, 0.4);
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .desc-container .title-container {
@@ -56,10 +56,39 @@
   border-radius: 50%;
 }
 
+.desc-container hr {
+  width: 100%;
+  margin: 20px 0px;
+  border-radius: 2px;
+  border: transparent;
+  border-top: 1px solid #3d7090;
+}
+
 .exist-container .green {
-  background-color: green;
+  background-color: #228b22;
 }
 
 .exist-container .red {
   background-color: red;
+}
+
+.desc-container .icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.desc-container .icons-container .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  color: #444444;
+  row-gap: 10px;
+}
+
+.icons-container .icon.right span {
+  direction: rtl;
 }
