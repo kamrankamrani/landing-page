@@ -1,11 +1,11 @@
 import { Grid, Tabs, Tab, Typography } from "@mui/material";
 import { useState } from "react";
+import AppTab from "../AppTab/AppTab";
 import DetailsTab from "../DetailsTab/DetailsTab";
 import "./Style/style.css";
 
 export default function TabsMenu() {
   const [tabSelected, setTabSelected] = useState(0);
-
   const handleTabClick = (value: number) => {
     //0 : مشخصات فنی
     //1 : اپلیکیشن
@@ -16,7 +16,7 @@ export default function TabsMenu() {
   return (
     <div className="tabs-container">
       <Grid container className="tabs">
-        <Tabs>
+        <Tabs value={tabSelected}>
           <Tab
             disableTouchRipple
             onClick={() => handleTabClick(0)}
@@ -38,7 +38,7 @@ export default function TabsMenu() {
         </Tabs>
         <Grid container className="tab-panel-container">
           {tabSelected === 0 && <DetailsTab />}
-          {tabSelected === 1 && <Typography>App</Typography>}
+          {tabSelected === 1 && <AppTab />}
           {tabSelected === 2 && <Typography>Q&A</Typography>}
         </Grid>
       </Grid>

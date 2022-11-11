@@ -4,6 +4,7 @@ import { Grid } from "@mui/material";
 import { useAppSelector } from "../../../hooks";
 import { useState } from "react";
 import "./Style/style.css";
+import { ShopDetailPageType } from "../../../Services/Types";
 const mockImgs = [
   {
     url: "",
@@ -27,6 +28,9 @@ export default function ImagesSlider() {
     (state) => state.shopSlice.defaultImageUrl
   );
   const [select, setSelect] = useState(0);
+  const shopItem: ShopDetailPageType = useAppSelector(
+    (state) => state.shopSlice.shopDetailPage
+  );
 
   const handleImagesClick = (value: number) => {
     setSelect(value);
@@ -34,7 +38,7 @@ export default function ImagesSlider() {
 
   return (
     <Grid item xs={12} className="images-slider-container">
-      {mockImgs.map((value, index) => {
+      {shopItem.images_array.map((value, index) => {
         return (
           <img
             onClick={() => handleImagesClick(index)}

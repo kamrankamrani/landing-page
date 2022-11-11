@@ -5,12 +5,27 @@ import ChevronLeftRoundedIcon from "@mui/icons-material/ChevronLeftRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import { useEffect, useState, MouseEvent } from "react";
 import "./Style/style.css";
+import { ShopDetailPageType } from "../../../Services/Types";
 
 export default function IndexImage() {
   const defaultImage = useAppSelector(
     (state) => state.shopSlice.defaultImageUrl
   );
   const [imageEl, setImageEl] = useState<null | HTMLElement>(null);
+  const [indexImageUrl, setIndexImageUrl] = useState<string>("");
+  const shopItem: ShopDetailPageType = useAppSelector(
+    (state) => state.shopSlice.shopDetailPage
+  );
+
+  useEffect(() => {
+    if (shopItem.images_array.length) {
+      shopItem.images_array.forEach((value) => {
+        if (value.index) {
+          setIndexImageUrl(value.url);
+        }
+      });
+    }
+  }, [shopItem]);
 
   useEffect(() => {
     const el_ = document.querySelector("#index-image") as HTMLElement;
@@ -43,7 +58,7 @@ export default function IndexImage() {
         //   onMouseOver={zoomImage}
         onMouseLeave={offZoomImage}
       >
-        <img id="index-image" alt="main" src={defaultImage} />
+        <img id="index-image" alt="main" src={indexImageUrl || defaultImage} />
       </div>
       <div className="arrow">
         <ChevronRightRoundedIcon />

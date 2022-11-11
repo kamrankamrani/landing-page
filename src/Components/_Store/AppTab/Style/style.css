@@ -1,0 +1,29 @@
+.app-tab-container {
+  direction: rtl;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.app-tab-container .link-container {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  padding: 5px;
+  color: #212121;
+}
+
+.app-tab-container .link-container svg {
+  color: #3d7090;
+}
+
+.app-tab-container .link-container.android svg {
+  color: #a4c639;
+}
+
+.app-tab-container .link-container p {
+  cursor: pointer;
+}
+
+.app-tab-container .link-container p:hover {
+  cursor: pointer;
+}

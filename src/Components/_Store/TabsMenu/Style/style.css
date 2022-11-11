@@ -31,7 +31,7 @@
 .tabs-container .tab-panel-container {
   padding: 20px;
   background-color: #f8f8f8;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 10px 0px 10px 10px;
   text-align: justify;
   color: #212121;
 }
