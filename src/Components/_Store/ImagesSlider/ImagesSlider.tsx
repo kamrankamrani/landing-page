@@ -38,17 +38,18 @@ export default function ImagesSlider() {
 
   return (
     <Grid item xs={12} className="images-slider-container">
-      {shopItem.images_array.map((value, index) => {
-        return (
-          <img
-            onClick={() => handleImagesClick(index)}
-            key={index}
-            src={value.url || defaultImgUrl}
-            alt="product"
-            className={`${select === index ? "selected" : ""}`}
-          />
-        );
-      })}
+      {shopItem.images_array &&
+        shopItem.images_array.map((value, index) => {
+          return (
+            <img
+              onClick={() => handleImagesClick(index)}
+              key={index}
+              src={value.url || defaultImgUrl}
+              alt="product"
+              className={`${select === index ? "selected" : ""}`}
+            />
+          );
+        })}
     </Grid>
   );
 }

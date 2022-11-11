@@ -8,7 +8,25 @@ const initialState: ShopDataType = {
   defaultImageUrl: noImage,
   searchFromMenuValue: "",
   shopBodyItems: mockDataForShopBody,
-  shopDetailPage: {} as ShopDetailPageType,
+  shopDetailPage: {
+    // technical_text: "",
+    // Q_A: [
+    //   {
+    //     question: "",
+    //     answer: "",
+    //   },
+    // ],
+    // images_array: [
+    //   {
+    //     url: "",
+    //     index: false,
+    //   },
+    // ],
+    // app_data: {
+    //   webapp_link: "",
+    //   android_link: "",
+    // },
+  } as ShopDetailPageType,
 };
 
 const shopSlice = createSlice({

@@ -18,7 +18,7 @@ export default function IndexImage() {
   );
 
   useEffect(() => {
-    if (shopItem.images_array.length) {
+    if (shopItem.images_array && shopItem.images_array.length) {
       shopItem.images_array.forEach((value) => {
         if (value.index) {
           setIndexImageUrl(value.url);

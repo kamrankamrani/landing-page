@@ -16,7 +16,7 @@ export default function TabsMenu() {
   return (
     <div className="tabs-container">
       <Grid container className="tabs">
-        <Tabs value={tabSelected}>
+        <Tabs value={4}>
           <Tab
             disableTouchRipple
             onClick={() => handleTabClick(0)}

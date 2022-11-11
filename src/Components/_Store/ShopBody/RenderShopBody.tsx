@@ -16,7 +16,7 @@ export default function RenderShopBody() {
   );
 
   const handleDetailClick = () => {
-    navigate("./detail");
+    navigate("./detail", { state: { product_id: -1 } });
   };
 
   return (
