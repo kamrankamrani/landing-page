@@ -1,0 +1,15 @@
+.q-and-a {
+  display: flex;
+  flex-direction: column;
+}
+
+.q-and-a .phone-call {
+  color: #212121;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.q-and-a .phone-call svg {
+  color: #3d7090;
+}

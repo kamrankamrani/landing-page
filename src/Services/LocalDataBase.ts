@@ -12,16 +12,17 @@ export const smarsetData: ShopDetailPageType = {
   Q_A: [],
   images_array: [
     {
-      url: "",
+      url: "img100",
       index: true,
     },
     {
-      url: "",
+      url: "img101",
     },
     {
-      url: "",
+      url: "img102",
     },
   ],
+  index_image_url: "image103",
 };
 
 export const mockDataForShopBody: ShopItemsDataTypes[] = [

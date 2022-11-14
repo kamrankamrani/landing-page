@@ -2,6 +2,7 @@ import { Grid, Tabs, Tab, Typography } from "@mui/material";
 import { useState } from "react";
 import AppTab from "../AppTab/AppTab";
 import DetailsTab from "../DetailsTab/DetailsTab";
+import QandA from "../Q&A/Q&A";
 import "./Style/style.css";
 
 export default function TabsMenu() {
@@ -39,7 +40,7 @@ export default function TabsMenu() {
         <Grid container className="tab-panel-container">
           {tabSelected === 0 && <DetailsTab />}
           {tabSelected === 1 && <AppTab />}
-          {tabSelected === 2 && <Typography>Q&A</Typography>}
+          {tabSelected === 2 && <QandA />}
         </Grid>
       </Grid>
     </div>

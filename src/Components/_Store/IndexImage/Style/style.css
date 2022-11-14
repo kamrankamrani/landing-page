@@ -18,6 +18,8 @@
   border-radius: 10px;
   max-height: 560px;
   width: auto;
+  min-height: 300px;
+  min-width: 300px;
   object-fit: cover;
   transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: zoom-in;

@@ -1,31 +1,44 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import { Grid } from "@mui/material";
-import { useAppSelector } from "../../../hooks";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
 import ChevronLeftRoundedIcon from "@mui/icons-material/ChevronLeftRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import { useEffect, useState, MouseEvent } from "react";
+import { setIndexImageUrl } from "../../../features/shopSlice/shopSlice";
 import "./Style/style.css";
-import { ShopDetailPageType } from "../../../Services/Types";
 
 export default function IndexImage() {
   const defaultImage = useAppSelector(
     (state) => state.shopSlice.defaultImageUrl
   );
   const [imageEl, setImageEl] = useState<null | HTMLElement>(null);
-  const [indexImageUrl, setIndexImageUrl] = useState<string>("");
-  const shopItem: ShopDetailPageType = useAppSelector(
-    (state) => state.shopSlice.shopDetailPage
+  const indexImageUrl = useAppSelector(
+    (state) => state.shopSlice.shopDetailPage.index_image_url
   );
+  const imagesArray = useAppSelector(
+    (state) => state.shopSlice.shopDetailPage.images_array
+  );
+  const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    if (shopItem.images_array && shopItem.images_array.length) {
-      shopItem.images_array.forEach((value) => {
-        if (value.index) {
-          setIndexImageUrl(value.url);
-        }
-      });
+  const handleArrowClick = (increment = true) => {
+    const arr_len = imagesArray.length;
+    if (arr_len === 0) return;
+    let index_image = 0;
+    imagesArray.forEach((value, index) => {
+      if (indexImageUrl === value.url) {
+        index_image = index;
+        return;
+      }
+    });
+    if (increment) {
+      index_image++; //increase index
+      index_image = index_image % arr_len;
+    } else {
+      index_image--;
+      index_image = (index_image + arr_len) % arr_len;
     }
-  }, [shopItem]);
+    dispatch(setIndexImageUrl(imagesArray[index_image].url));
+  };
 
   useEffect(() => {
     const el_ = document.querySelector("#index-image") as HTMLElement;
@@ -50,7 +63,7 @@ export default function IndexImage() {
   return (
     <Grid item xs={12} className="index-image-container">
       <div className="arrow">
-        <ChevronLeftRoundedIcon />
+        <ChevronLeftRoundedIcon onClick={() => handleArrowClick()} />
       </div>
       <div
         className="image-wrapper"
@@ -58,10 +71,14 @@ export default function IndexImage() {
         //   onMouseOver={zoomImage}
         onMouseLeave={offZoomImage}
       >
-        <img id="index-image" alt="main" src={indexImageUrl || defaultImage} />
+        <img
+          id="index-image"
+          alt={indexImageUrl}
+          src={indexImageUrl || defaultImage}
+        />
       </div>
       <div className="arrow">
-        <ChevronRightRoundedIcon />
+        <ChevronRightRoundedIcon onClick={() => handleArrowClick(false)} />
       </div>
     </Grid>
   );

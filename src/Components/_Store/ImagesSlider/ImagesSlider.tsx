@@ -1,55 +1,39 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Grid } from "@mui/material";
-import { useAppSelector } from "../../../hooks";
-import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { setIndexImageUrl } from "../../../features/shopSlice/shopSlice";
 import "./Style/style.css";
-import { ShopDetailPageType } from "../../../Services/Types";
-const mockImgs = [
-  {
-    url: "",
-  },
-  {
-    url: "",
-  },
-  {
-    url: "",
-  },
-  {
-    url: "",
-  },
-  {
-    url: "",
-  },
-];
 
 export default function ImagesSlider() {
   const defaultImgUrl = useAppSelector(
     (state) => state.shopSlice.defaultImageUrl
   );
-  const [select, setSelect] = useState(0);
-  const shopItem: ShopDetailPageType = useAppSelector(
-    (state) => state.shopSlice.shopDetailPage
+  const imagesArray = useAppSelector(
+    (state) => state.shopSlice.shopDetailPage.images_array
   );
+  const indexImageUrl = useAppSelector(
+    (state) => state.shopSlice.shopDetailPage.index_image_url
+  );
+  const dispatch = useAppDispatch();
 
-  const handleImagesClick = (value: number) => {
-    setSelect(value);
+  const handleImagesClick = (url: string) => {
+    dispatch(setIndexImageUrl(url));
   };
 
   return (
     <Grid item xs={12} className="images-slider-container">
-      {shopItem.images_array &&
-        shopItem.images_array.map((value, index) => {
-          return (
-            <img
-              onClick={() => handleImagesClick(index)}
-              key={index}
-              src={value.url || defaultImgUrl}
-              alt="product"
-              className={`${select === index ? "selected" : ""}`}
-            />
-          );
-        })}
+      {imagesArray.map((val, ind) => {
+        return (
+          <img
+            onClick={() => handleImagesClick(val.url)}
+            key={ind}
+            src={val.url || defaultImgUrl}
+            alt={`product-${val.url}`}
+            className={`${val.url === indexImageUrl ? "selected" : ""}`}
+          />
+        );
+      })}
     </Grid>
   );
 }

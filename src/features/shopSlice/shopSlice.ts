@@ -9,23 +9,24 @@ const initialState: ShopDataType = {
   searchFromMenuValue: "",
   shopBodyItems: mockDataForShopBody,
   shopDetailPage: {
-    // technical_text: "",
-    // Q_A: [
-    //   {
-    //     question: "",
-    //     answer: "",
-    //   },
-    // ],
-    // images_array: [
-    //   {
-    //     url: "",
-    //     index: false,
-    //   },
-    // ],
-    // app_data: {
-    //   webapp_link: "",
-    //   android_link: "",
-    // },
+    technical_text: "",
+    Q_A: [
+      {
+        question: "",
+        answer: "",
+      },
+    ],
+    images_array: [
+      {
+        url: "",
+        index: false,
+      },
+    ],
+    app_data: {
+      webapp_link: "",
+      android_link: "",
+    },
+    index_image_url: "",
   } as ShopDetailPageType,
 };
 
@@ -39,9 +40,15 @@ const shopSlice = createSlice({
     renderShopDetailPage(state, action: PayloadAction<ShopDetailPageType>) {
       state.shopDetailPage = action.payload;
     },
+    setIndexImageUrl(state, action: PayloadAction<string>) {
+      state.shopDetailPage.index_image_url = action.payload;
+    },
   },
 });
 
-export const { setSearchValueFromMenu, renderShopDetailPage } =
-  shopSlice.actions;
+export const {
+  setSearchValueFromMenu,
+  renderShopDetailPage,
+  setIndexImageUrl,
+} = shopSlice.actions;
 export default shopSlice.reducer;

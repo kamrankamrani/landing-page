@@ -26,13 +26,14 @@ export interface ShopDetailPageType {
     webapp_link: string;
     android_link: string;
   };
+  index_image_url: string;
 }
 
 export interface ShopDataType {
   defaultImageUrl: string;
   searchFromMenuValue: string;
   shopBodyItems: ShopItemsDataTypes[];
-  shopDetailPage: any;
+  shopDetailPage: ShopDetailPageType;
 }
 
 export interface screenSizeSliceType {

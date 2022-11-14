@@ -4,27 +4,15 @@ import ImagesSlider from "../ImagesSlider/ImagesSlider";
 import IndexImage from "../IndexImage/IndexImage";
 import TabsMenu from "../TabsMenu/TabsMenu";
 import { useEffect } from "react";
-import "./Style/style.css";
 import { useAppDispatch } from "../../../hooks";
 import { renderShopDetailPage } from "../../../features/shopSlice/shopSlice";
 import { smarsetData } from "../../../Services/LocalDataBase";
 import { useLocation } from "react-router-dom";
+import "./Style/style.css";
 
-interface IProps {
-  product_id?: number;
-}
-
-export default function Detail(props: IProps) {
+export default function Detail() {
   const dispatch = useAppDispatch();
   const location = useLocation();
-  // useEffect(() => {
-  //   if (!props.product_id) {
-  //     console.log("mock data rendred");
-  //     //mock data load
-  //     dispatch(renderShopDetailPage(smarsetData));
-  //   }
-  // }, [dispatch, props]);
-
   useEffect(() => {
     if (location.state) {
       if (location.state.product_id) {
@@ -34,7 +22,11 @@ export default function Detail(props: IProps) {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.state]);
+  }, [location]);
+
+  // useEffect(() => {
+  //   console.log("hree ", location);
+  // }, []);
 
   return (
     <div className="detail-container">
