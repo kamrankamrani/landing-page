@@ -13,6 +13,10 @@ export interface ShopItemsDataTypes {
 }
 
 export interface ShopDetailPageType {
+  id: number;
+  off: string;
+  price: string;
+  title: string;
   technical_text: string;
   Q_A: {
     question: string;
@@ -46,4 +50,9 @@ export interface dailyOffDataType {
   off: string;
   rawPrice: string;
   imageUrl: string;
+}
+
+export interface productDataType {
+  id: number;
+  data: ShopDetailPageType;
 }

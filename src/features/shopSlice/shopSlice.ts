@@ -1,13 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { ShopDataType, ShopDetailPageType } from "../../Services/Types";
+import {
+  ShopDataType,
+  ShopDetailPageType,
+  ShopItemsDataTypes,
+} from "../../Services/Types";
 import noImage from "../../assets/images/noimage.png";
-import { mockDataForShopBody } from "../../Services/LocalDataBase";
 
 const initialState: ShopDataType = {
   defaultImageUrl: noImage,
   searchFromMenuValue: "",
-  shopBodyItems: mockDataForShopBody,
+  shopBodyItems: [] as ShopItemsDataTypes[],
   shopDetailPage: {
     technical_text: "",
     Q_A: [
@@ -40,6 +43,9 @@ const shopSlice = createSlice({
     renderShopDetailPage(state, action: PayloadAction<ShopDetailPageType>) {
       state.shopDetailPage = action.payload;
     },
+    setShopBodyItems(state, action: PayloadAction<ShopItemsDataTypes[]>) {
+      state.shopBodyItems = action.payload;
+    },
     setIndexImageUrl(state, action: PayloadAction<string>) {
       state.shopDetailPage.index_image_url = action.payload;
     },
@@ -50,5 +56,6 @@ export const {
   setSearchValueFromMenu,
   renderShopDetailPage,
   setIndexImageUrl,
+  setShopBodyItems,
 } = shopSlice.actions;
 export default shopSlice.reducer;

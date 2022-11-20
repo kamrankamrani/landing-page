@@ -1,10 +1,15 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Grid, Typography, Button } from "@mui/material";
-import { useAppSelector } from "../../../hooks";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { NumToPersian } from "../../../Services/ConvertNumber";
 import { ShopItemsDataTypes } from "../../../Services/Types";
 import ErrorOutlineRoundedIcon from "@mui/icons-material/ErrorOutlineRounded";
-import "./Style/style.css";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { getShopBodyData } from "../../../Services/LocalApi";
+import { setShopBodyItems } from "../../../features/shopSlice/shopSlice";
+import "./Style/style.css";
 
 export default function RenderShopBody() {
   const navigate = useNavigate();
@@ -14,10 +19,18 @@ export default function RenderShopBody() {
   const defaultImage = useAppSelector(
     (state) => state.shopSlice.defaultImageUrl
   );
+  const dispatch = useAppDispatch();
 
-  const handleDetailClick = () => {
-    navigate("./detail", { state: { product_id: -1 } });
+  const handleDetailClick = (id: number) => {
+    navigate("./detail", { state: { product_id: id || -1 } }); //default is -1
   };
+
+  useEffect(() => {
+    const shopData = getShopBodyData();
+    if (shopData) {
+      dispatch(setShopBodyItems(shopData));
+    }
+  }, []);
 
   return (
     <Grid container className="items-wrapper">
@@ -35,14 +48,17 @@ export default function RenderShopBody() {
               <Grid container className="item">
                 <div className="off-container">
                   <div className="off">
-                    {value.off && (
+                    {Number(value.off) > 0 && (
                       <Typography variant="caption">
                         {NumToPersian(value.off)} %
                       </Typography>
                     )}
                   </div>
                 </div>
-                <div className="img-container">
+                <div
+                  className="img-container"
+                  onClick={() => handleDetailClick(value.id)}
+                >
                   <img src={value.imageUrl || defaultImage} alt="item-pic" />
                 </div>
                 <div className="description">
@@ -50,7 +66,7 @@ export default function RenderShopBody() {
                 </div>
                 <div className="price-container">
                   <div className="item-off">
-                    {value.off && (
+                    {Number(value.off) > 0 && (
                       <Typography variant="caption">
                         {NumToPersian(Number(value.rawPrice).toLocaleString())}{" "}
                         تومان
@@ -68,7 +84,7 @@ export default function RenderShopBody() {
                       تومان
                     </Typography>
                     <Button
-                      onClick={handleDetailClick}
+                      onClick={() => handleDetailClick(value.id)}
                       className="product-detail-button"
                     >
                       <Typography variant="caption">جزئیات بیشتر</Typography>

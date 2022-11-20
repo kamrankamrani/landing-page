@@ -4,20 +4,25 @@ import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
 import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
 import BuildRoundedIcon from "@mui/icons-material/BuildRounded";
 import "./Style/style.css";
+import { useAppSelector } from "../../../hooks";
 
 export default function DetailDescription() {
   const mockExist = true;
-
-  const mockPrice = "1550000";
+  const productPrice = useAppSelector(
+    (state) => state.shopSlice.shopDetailPage.price
+  );
+  const productTitle = useAppSelector(
+    (state) => state.shopSlice.shopDetailPage.title
+  );
 
   return (
     <Grid item xs={12} className="desc-container">
       <Grid container className="title-container">
-        <Typography variant="h4">محصول کنترل پیامکی</Typography>
+        <Typography variant="h4">{productTitle}</Typography>
       </Grid>
       <Grid container className="price-container">
         <Typography>
-          {NumToPersian(Number(mockPrice).toLocaleString())} تومان
+          {NumToPersian(Number(productPrice).toLocaleString())} تومان
         </Typography>
       </Grid>
       <Grid container className="button-container">

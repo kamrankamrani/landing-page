@@ -8,6 +8,7 @@ import { useAppDispatch } from "../../../hooks";
 import { renderShopDetailPage } from "../../../features/shopSlice/shopSlice";
 import { smarsetData } from "../../../Services/LocalDataBase";
 import { useLocation } from "react-router-dom";
+import renderProductData from "./RenderProductData";
 import "./Style/style.css";
 
 export default function Detail() {
@@ -15,18 +16,22 @@ export default function Detail() {
   const location = useLocation();
   useEffect(() => {
     if (location.state) {
-      if (location.state.product_id) {
+      if (location.state.product_id !== undefined) {
         if (location.state.product_id === -1) {
           dispatch(renderShopDetailPage(smarsetData));
+        } else {
+          const result = renderProductData(location.state.product_id);
+          if (result) {
+            console.log("result is", result);
+            dispatch(renderShopDetailPage(result));
+          } else {
+            dispatch(renderShopDetailPage(smarsetData));
+          }
         }
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
-
-  // useEffect(() => {
-  //   console.log("hree ", location);
-  // }, []);
 
   return (
     <div className="detail-container">

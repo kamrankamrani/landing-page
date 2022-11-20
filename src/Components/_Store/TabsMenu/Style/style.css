@@ -35,3 +35,7 @@
   text-align: justify;
   color: #212121;
 }
+
+.tabs .indicator {
+  background-color: #7e7e7e;
+}

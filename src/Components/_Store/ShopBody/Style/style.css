@@ -13,6 +13,19 @@
   flex-direction: row;
 }
 
+.shop-body-container .img-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-body-container .img-container img {
+  max-height: 200px;
+  max-width: 230px;
+  border-radius: 10px;
+}
+
 .shop-body-container .item {
   cursor: pointer;
   padding: 10px;
@@ -107,4 +120,11 @@
   background-color: #3d7090;
   color: #f8f8f8;
   border: #3d7090 solid 1px;
+}
+
+@media screen and (max-width: 600px) {
+  .shop-body-container .img-container img {
+    max-height: 200px;
+    max-width: 300px;
+  }
 }
