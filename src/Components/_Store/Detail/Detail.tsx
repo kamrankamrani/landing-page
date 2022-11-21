@@ -22,7 +22,6 @@ export default function Detail() {
         } else {
           const result = renderProductData(location.state.product_id);
           if (result) {
-            console.log("result is", result);
             dispatch(renderShopDetailPage(result));
           } else {
             dispatch(renderShopDetailPage(smarsetData));

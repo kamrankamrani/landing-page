@@ -15,6 +15,7 @@ export interface ShopItemsDataTypes {
 export interface ShopDetailPageType {
   id: number;
   off: string;
+  purchase_link: string;
   price: string;
   title: string;
   technical_text: string;

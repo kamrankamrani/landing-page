@@ -4,6 +4,7 @@ import { ShopDetailPageType, ShopItemsDataTypes } from "./Types";
 export const smarsetData: ShopDetailPageType = {
   id: -1,
   off: "0",
+  purchase_link: "",
   price: "1500000",
   title: "دیتای پیش فرض",
   technical_text: `
@@ -65,6 +66,7 @@ export const productData: ShopDetailPageType[] = [
   {
     id: 0,
     off: "0",
+    purchase_link: "",
     price: "1850000",
     title: "سیستم چهار خروجی مدل اسمارست",
     app_data: {
@@ -90,6 +92,8 @@ export const productData: ShopDetailPageType[] = [
   {
     id: 1,
     off: "0",
+    purchase_link:
+      "https://www.digikala.com/product/dkp-1550321/%D8%AA%D8%A7%DB%8C%D9%85%D8%B1-%D8%A2%D8%A8%DB%8C%D8%A7%D8%B1%DB%8C-%D9%88%DB%8C%D8%B3%D8%AA%D9%88-%D9%85%D8%AF%D9%84-ec01/",
     price: "995000",
     title: "مرکز کنترل تک خروجی",
     app_data: {
@@ -126,6 +130,8 @@ export const productData: ShopDetailPageType[] = [
   {
     id: 2,
     off: "0",
+    purchase_link:
+      "https://www.digikala.com/product/dkp-1710875/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%DA%A9%D9%86%D8%AA%D8%B1%D9%84-%D9%87%D9%88%D8%B4%D9%85%D9%86%D8%AF-%D9%88%DB%8C%D8%B3%D8%AA%D9%88-%D9%85%D8%AF%D9%84-ec04/",
     price: "1340000",
     title: "مرکز کنترل چهار خروجی",
     app_data: {
@@ -154,6 +160,8 @@ export const productData: ShopDetailPageType[] = [
   {
     id: 3,
     off: "0",
+    purchase_link:
+      "https://www.digikala.com/product/dkp-1922723/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%DA%A9%D9%86%D8%AA%D8%B1%D9%84-%D9%BE%DB%8C%D8%A7%D9%85%DA%A9%DB%8C-%D9%88%DB%8C%D8%B3%D8%AA%D9%88-%D9%85%D8%AF%D9%84-ec05/",
     price: "1550000",
     title: "مرکز کنترل پنج خروجی",
     app_data: {

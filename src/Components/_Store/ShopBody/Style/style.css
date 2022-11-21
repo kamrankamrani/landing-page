@@ -21,8 +21,10 @@
 }
 
 .shop-body-container .img-container img {
-  max-height: 200px;
-  max-width: 230px;
+  /* max-height: 200px;
+  max-width: 230px; */
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 

@@ -14,6 +14,16 @@ export default function DetailDescription() {
   const productTitle = useAppSelector(
     (state) => state.shopSlice.shopDetailPage.title
   );
+  const purchaseLink = useAppSelector(
+    (state) => state.shopSlice.shopDetailPage.purchase_link
+  );
+
+  const handleBuyClick = () => {
+    const link_ = purchaseLink || "#";
+    if (link_ !== "#") {
+      window.open(link_, "_blank");
+    }
+  };
 
   return (
     <Grid item xs={12} className="desc-container">
@@ -26,7 +36,7 @@ export default function DetailDescription() {
         </Typography>
       </Grid>
       <Grid container className="button-container">
-        <Button className="button">
+        <Button className="button" onClick={handleBuyClick}>
           <Typography>خرید از دیجیکالا</Typography>
         </Button>
       </Grid>
