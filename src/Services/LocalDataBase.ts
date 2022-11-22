@@ -1,5 +1,5 @@
 import { homeUrl, productImagePreUrl } from "./Config";
-import { ShopDetailPageType, ShopItemsDataTypes } from "./Types";
+import { ShopDetailPageType } from "./Types";
 
 export const smarsetData: ShopDetailPageType = {
   id: -1,
@@ -31,41 +31,10 @@ export const smarsetData: ShopDetailPageType = {
   index_image_url: "image103",
 };
 
-export const mockDataForShopBody: ShopItemsDataTypes[] = [
-  {
-    id: 0,
-    description: "سیستم چهار خروجی مدل اسمارست",
-    imageUrl: "",
-    off: "0",
-    rawPrice: "1850000",
-  },
-  {
-    id: 1,
-    description: "مرکز کنترل تک خروجی",
-    imageUrl: "",
-    off: "4",
-    rawPrice: "995000",
-  },
-  {
-    id: 2,
-    description: "مرکز کنترل چهار خروجی",
-    imageUrl: "",
-    off: "5",
-    rawPrice: "1340000",
-  },
-  {
-    id: 3,
-    description: "مرکز کنترل پنج خروجی",
-    imageUrl: "",
-    off: "4",
-    rawPrice: "1550000",
-  },
-];
-
 export const productData: ShopDetailPageType[] = [
   {
     id: 0,
-    off: "0",
+    off: "3",
     purchase_link: "",
     price: "1850000",
     title: "سیستم چهار خروجی مدل اسمارست",
@@ -77,17 +46,20 @@ export const productData: ShopDetailPageType[] = [
     Q_A: [],
     images_array: [
       {
-        url: "img100",
+        url: `${homeUrl}${productImagePreUrl}/smarset/1.jpg`,
         index: true,
       },
       {
-        url: "img101",
+        url: `${homeUrl}${productImagePreUrl}/smarset/2.jpg`,
       },
       {
-        url: "img102",
+        url: `${homeUrl}${productImagePreUrl}/smarset/3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/smarset/4.jpg`,
       },
     ],
-    index_image_url: "",
+    index_image_url: `${homeUrl}${productImagePreUrl}/smarset/1.jpg`,
   },
   {
     id: 1,
@@ -152,7 +124,19 @@ export const productData: ShopDetailPageType[] = [
         url: `${homeUrl}${productImagePreUrl}/EC/4/EC_3.jpg`,
       },
       {
-        url: `${homeUrl}${productImagePreUrl}/EC/4/EC_4.jpg`,
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_1.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_4.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_5.jpg`,
       },
     ],
     index_image_url: `${homeUrl}${productImagePreUrl}/EC/4/EC_1.jpg`,
@@ -182,9 +166,231 @@ export const productData: ShopDetailPageType[] = [
         url: `${homeUrl}${productImagePreUrl}/EC/5/EC_3.jpg`,
       },
       {
-        url: `${homeUrl}${productImagePreUrl}/EC/5/EC_4.jpg`,
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_1.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_4.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_5.jpg`,
       },
     ],
     index_image_url: `${homeUrl}${productImagePreUrl}/EC/5/EC_1.jpg`,
+  },
+  {
+    id: 4,
+    off: "0",
+    purchase_link:
+      "https://www.digikala.com/product/dkp-1928639/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%DA%A9%D9%86%D8%AA%D8%B1%D9%84-%D9%BE%DB%8C%D8%A7%D9%85%DA%A9%DB%8C-%D9%88%DB%8C%D8%B3%D8%AA%D9%88-%D9%85%D8%AF%D9%84-ec06/",
+    price: "1660000",
+    title: "مرکز کنترل شش خروجی",
+    app_data: {
+      webapp_link: "https://app.visto.ir",
+      android_link: "",
+    },
+    technical_text: ``,
+    Q_A: [],
+    images_array: [
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/6/EC_1.jpg`,
+        index: true,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/6/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/6/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_1.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_4.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_5.jpg`,
+      },
+    ],
+    index_image_url: `${homeUrl}${productImagePreUrl}/EC/6/EC_1.jpg`,
+  },
+  {
+    id: 5,
+    off: "0",
+    purchase_link:
+      "https://www.digikala.com/product/dkp-1928726/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%DA%A9%D9%86%D8%AA%D8%B1%D9%84-%D9%BE%DB%8C%D8%A7%D9%85%DA%A9%DB%8C-%D9%88%DB%8C%D8%B3%D8%AA%D9%88-%D9%85%D8%AF%D9%84-ec07",
+    price: "1850000",
+    title: "مرکز کنترل هفت خروجی",
+    app_data: {
+      webapp_link: "https://app.visto.ir",
+      android_link: "",
+    },
+    technical_text: ``,
+    Q_A: [],
+    images_array: [
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/7/EC_1.jpg`,
+        index: true,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/7/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/7/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_1.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_4.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_5.jpg`,
+      },
+    ],
+    index_image_url: `${homeUrl}${productImagePreUrl}/EC/7/EC_1.jpg`,
+  },
+  {
+    id: 6,
+    off: "0",
+    purchase_link:
+      "https://www.digikala.com/product/dkp-1922740/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%DA%A9%D9%86%D8%AA%D8%B1%D9%84-%D9%BE%DB%8C%D8%A7%D9%85%DA%A9%DB%8C-%D9%88%DB%8C%D8%B3%D8%AA%D9%88-%D9%85%D8%AF%D9%84-ec08",
+    price: "1990000",
+    title: "مرکز کنترل هشت خروجی",
+    app_data: {
+      webapp_link: "https://app.visto.ir",
+      android_link: "",
+    },
+    technical_text: ``,
+    Q_A: [],
+    images_array: [
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/8/EC_1.jpg`,
+        index: true,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/8/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/8/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_1.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_4.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_5.jpg`,
+      },
+    ],
+    index_image_url: `${homeUrl}${productImagePreUrl}/EC/8/EC_1.jpg`,
+  },
+  {
+    id: 7,
+    off: "0",
+    purchase_link:
+      "https://www.digikala.com/product/dkp-1922740/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%DA%A9%D9%86%D8%AA%D8%B1%D9%84-%D9%BE%DB%8C%D8%A7%D9%85%DA%A9%DB%8C-%D9%88%DB%8C%D8%B3%D8%AA%D9%88-%D9%85%D8%AF%D9%84-ec08",
+    price: "2150000",
+    title: "مرکز کنترل نه خروجی",
+    app_data: {
+      webapp_link: "https://app.visto.ir",
+      android_link: "",
+    },
+    technical_text: ``,
+    Q_A: [],
+    images_array: [
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/9/EC_1.jpg`,
+        index: true,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/9/EC_2.png`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/9/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_1.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_4.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_5.jpg`,
+      },
+    ],
+    index_image_url: `${homeUrl}${productImagePreUrl}/EC/9/EC_1.jpg`,
+  },
+  {
+    id: 8,
+    off: "5",
+    purchase_link:
+      "https://www.digikala.com/product/dkp-1922740/%D8%B3%DB%8C%D8%B3%D8%AA%D9%85-%DA%A9%D9%86%D8%AA%D8%B1%D9%84-%D9%BE%DB%8C%D8%A7%D9%85%DA%A9%DB%8C-%D9%88%DB%8C%D8%B3%D8%AA%D9%88-%D9%85%D8%AF%D9%84-ec08",
+    price: "2150000",
+    title: "مرکز کنترل ده خروجی",
+    app_data: {
+      webapp_link: "https://app.visto.ir",
+      android_link: "",
+    },
+    technical_text: ``,
+    Q_A: [],
+    images_array: [
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/10/EC_1.jpg`,
+        index: true,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/10/EC_2.png`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/10/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_1.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_2.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_3.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_4.jpg`,
+      },
+      {
+        url: `${homeUrl}${productImagePreUrl}/EC/common/EC_5.jpg`,
+      },
+    ],
+    index_image_url: `${homeUrl}${productImagePreUrl}/EC/10/EC_1.jpg`,
   },
 ];

@@ -58,6 +58,7 @@
   flex-direction: column;
   width: 150px;
   row-gap: 20px;
+  position: relative;
 }
 
 .store-suggestion-container .cards-container .off-container {
@@ -70,20 +71,25 @@
   align-items: center;
   align-self: flex-start;
   margin-bottom: 5px;
+  position: absolute;
+  top: 5px;
 }
 
 .store-suggestion-container .cards-container .image-container {
-  padding: 5px;
-  background-color: azure;
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
 .store-suggestion-container .cards-container img {
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
+  border-radius: 5px;
+  max-width: 100%;
+  max-height: 100px;
+  height: auto;
   cursor: pointer;
 }
 

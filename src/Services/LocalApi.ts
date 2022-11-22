@@ -18,3 +18,24 @@ export const getShopBodyData: getShopBodyDataType = () => {
 
   return shopData;
 };
+
+type getSuggestionDataType = () => ShopItemsDataTypes[];
+
+export const getSuggestionData: getSuggestionDataType = () => {
+  const rawProductData: ShopDetailPageType[] = productData;
+  const suggestData: ShopItemsDataTypes[] = [];
+  rawProductData.forEach((value) => {
+    if (Number(value.off) > 0) {
+      const data_: ShopItemsDataTypes = {
+        description: value.title,
+        id: value.id,
+        imageUrl: value.index_image_url,
+        off: value.off,
+        rawPrice: value.price,
+      };
+      suggestData.push(data_);
+    }
+  });
+  console.log(suggestData);
+  return suggestData;
+};

@@ -22,7 +22,7 @@ export default function RenderShopBody() {
   const dispatch = useAppDispatch();
 
   const handleDetailClick = (id: number) => {
-    navigate("./detail", { state: { product_id: id || -1 } }); //default is -1
+    navigate("./detail", { state: { product_id: id } }); //default is -1
   };
 
   useEffect(() => {
