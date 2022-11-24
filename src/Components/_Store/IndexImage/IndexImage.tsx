@@ -65,13 +65,11 @@ export default function IndexImage() {
       <div className="arrow">
         <ChevronLeftRoundedIcon onClick={() => handleArrowClick()} />
       </div>
-      <div
-        className="image-wrapper"
-        onMouseMove={zoomImage}
-        //   onMouseOver={zoomImage}
-        onMouseLeave={offZoomImage}
-      >
+      <div className="image-wrapper">
         <img
+          onMouseMove={zoomImage}
+          //   onMouseOver={zoomImage}
+          onMouseLeave={offZoomImage}
           id="index-image"
           alt={indexImageUrl}
           src={indexImageUrl || defaultImage}

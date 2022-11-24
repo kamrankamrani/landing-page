@@ -1,0 +1,16 @@
+.widget-header-container {
+  direction: rtl;
+  margin: 5px 0px 20px 0px;
+  padding: 0px 10px;
+  color: #1f3746;
+  display: flex;
+}
+
+.widget-header-container p {
+  font-weight: 450;
+}
+
+.widget-header-container p svg {
+  margin-left: 5px;
+  vertical-align: middle;
+}

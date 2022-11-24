@@ -9,14 +9,15 @@
   scroll-behavior: smooth;
   column-gap: 2px;
   width: fit-content;
+  align-self: flex-end;
 }
 
 .images-slider-container img:last-of-type {
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 5px 0px 0px 5px;
 }
 
 .images-slider-container img:first-of-type {
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 5px 5px 0px;
 }
 
 .images-slider-container img {
@@ -32,5 +33,5 @@
 }
 
 .images-slider-container img.selected {
-  background-color: #3d7090;
+  background-color: #8ab0c7;
 }
