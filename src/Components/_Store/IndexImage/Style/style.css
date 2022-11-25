@@ -46,6 +46,6 @@
 
 @media (max-width: 600px) {
   .detail-container .image-wrapper {
-    height: auto;
+    max-height: 300px;
   }
 }

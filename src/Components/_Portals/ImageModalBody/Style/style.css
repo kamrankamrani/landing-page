@@ -1,0 +1,67 @@
+.img-modal-body {
+  display: flex;
+  position: relative;
+}
+
+.extra-img-div {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  filter: blur(13px);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+
+.img-modal-body .icon-container {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #f8f8f8;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.img-modal-body .icon-container svg {
+  cursor: pointer;
+}
+
+.img-modal-body .img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 0;
+  height: 100vh;
+}
+
+.img-modal-body .img-container .img-wrapper {
+  display: flex;
+  justify-content: center ;
+}
+
+.img-modal-body .img-container .img-wrapper img {
+  max-width: 90%;
+  height: auto;
+  display: inline;
+  border-radius: 10px;
+  max-height: 90vh;
+}
+
+.img-modal-body .img-container .icon {
+  position: absolute;
+  /* top: 30vh; */
+  z-index: 1;
+  cursor: pointer;
+}
+
+.img-modal-body .img-container .icon.right {
+  right: 10px;
+}
+
+.img-modal-body .img-container .icon.left {
+  left: 10px;
+}

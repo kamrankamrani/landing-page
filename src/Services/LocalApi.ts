@@ -36,6 +36,5 @@ export const getSuggestionData: getSuggestionDataType = () => {
       suggestData.push(data_);
     }
   });
-  console.log(suggestData);
   return suggestData;
 };

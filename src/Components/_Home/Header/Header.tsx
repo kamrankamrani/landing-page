@@ -4,7 +4,7 @@ import { Grid, Typography } from "@mui/material";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import LogoSvg from "../../../assets/logo.svg";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
-import React from "react";
+import React, { Fragment, useEffect } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   setScreenMiddleSize,
@@ -12,16 +12,25 @@ import {
 } from "../../../features/screenSizeSlice/screenSizeSlice";
 import DehazeRoundedIcon from "@mui/icons-material/DehazeRounded";
 import { useNavigate } from "react-router-dom";
+import MobilMenu from "../../_Portals/MobileMenu/MobileMenu";
+import { setOpenMobileMenu } from "../../../features/portalSlice/portalSlice";
 import "./Style/style.css";
 
 export default function Header() {
   const smallScreen = useAppSelector((state) => state.screenSize.isSmallScreen);
+  const mobileMenuOpen = useAppSelector(
+    (state) => state.portalSlice.openMobileMenu
+  );
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const matchSmallScreen = useMediaQuery("(max-width:600px)");
   const matchMiddleScreen = useMediaQuery("(max-width:792px)");
   dispatch(setScreenSmallSize(matchSmallScreen));
   dispatch(setScreenMiddleSize(matchMiddleScreen));
+
+  const handleMobileMenuClick = () => {
+    dispatch(setOpenMobileMenu(!mobileMenuOpen));
+  };
 
   const handleHeaderClick = (value: string) => {
     switch (value) {
@@ -78,7 +87,13 @@ export default function Header() {
           </div>
         </React.Fragment>
       ) : (
-        <DehazeRoundedIcon className="menu-container" />
+        <Fragment>
+          <DehazeRoundedIcon
+            className="menu-container"
+            onClick={handleMobileMenuClick}
+          />
+          <MobilMenu />
+        </Fragment>
       )}
     </Grid>
   );

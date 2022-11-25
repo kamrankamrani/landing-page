@@ -1,0 +1,22 @@
+.mobile-menu {
+  background-color: #f8f8f8;
+  display: flex;
+  padding: 50px 30px 30px 40px;
+  flex-direction: column;
+  row-gap: 40px;
+  width: max-content;
+  border-radius: 0px 0px 0px 10px;
+  color: #212121;
+}
+
+.mobile-menu .item {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+}
+
+.mobile-menu .item svg {
+  color: #3d7090;
+}

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import { Grid } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
@@ -5,11 +7,16 @@ import ChevronLeftRoundedIcon from "@mui/icons-material/ChevronLeftRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import { useEffect, useState, MouseEvent } from "react";
 import { setIndexImageUrl } from "../../../features/shopSlice/shopSlice";
+import { setOpenImageModal } from "../../../features/portalSlice/portalSlice";
+import ImageModal from "../../_Portals/ImageModal/ImageModal";
 import "./Style/style.css";
 
 export default function IndexImage() {
   const defaultImage = useAppSelector(
     (state) => state.shopSlice.defaultImageUrl
+  );
+  const isMobileScreen = useAppSelector(
+    (state) => state.screenSize.isSmallScreen
   );
   const [imageEl, setImageEl] = useState<null | HTMLElement>(null);
   const indexImageUrl = useAppSelector(
@@ -46,6 +53,9 @@ export default function IndexImage() {
   }, []);
 
   const zoomImage = (e: MouseEvent<HTMLDivElement>) => {
+    if (isMobileScreen) {
+      return;
+    }
     if (!imageEl) return;
     const el_ = e.target as HTMLDivElement;
     const x = e.clientX - el_.offsetLeft;
@@ -55,9 +65,14 @@ export default function IndexImage() {
   };
 
   const offZoomImage = () => {
+    if (isMobileScreen) return;
     if (!imageEl) return;
     imageEl.style.transformOrigin = `center center`;
     imageEl.style.transform = "scale(1)";
+  };
+
+  const openImageModal = () => {
+    dispatch(setOpenImageModal(true));
   };
 
   return (
@@ -67,6 +82,7 @@ export default function IndexImage() {
       </div>
       <div className="image-wrapper">
         <img
+          onClick={openImageModal}
           onMouseMove={zoomImage}
           //   onMouseOver={zoomImage}
           onMouseLeave={offZoomImage}
@@ -78,6 +94,7 @@ export default function IndexImage() {
       <div className="arrow">
         <ChevronRightRoundedIcon onClick={() => handleArrowClick(false)} />
       </div>
+      <ImageModal />
     </Grid>
   );
 }

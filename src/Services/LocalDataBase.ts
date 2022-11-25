@@ -370,7 +370,7 @@ export const productData: ShopDetailPageType[] = [
         index: true,
       },
       {
-        url: `${homeUrl}${productImagePreUrl}/EC/10/EC_2.png`,
+        url: `${homeUrl}${productImagePreUrl}/EC/10/EC_2.jpg`,
       },
       {
         url: `${homeUrl}${productImagePreUrl}/EC/10/EC_3.jpg`,

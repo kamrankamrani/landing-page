@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { NumToPersian } from "../../../Services/ConvertNumber";
 import { commentType } from "../../../Services/Types";
 import commentSource from "./CommentSource";
+import InsertCommentRoundedIcon from "@mui/icons-material/InsertCommentRounded";
 import "./Style/comments.css";
 
 export default function Comments() {
@@ -64,6 +65,10 @@ export default function Comments() {
 
   return (
     <Grid container className="comments-parent">
+      <Grid container className="header">
+        <InsertCommentRoundedIcon fontSize="small" />
+        <Typography>مردم درباره ما چه میگویند؟</Typography>
+      </Grid>
       <Grid
         container
         className={`comments-container ${

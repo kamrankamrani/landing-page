@@ -57,3 +57,8 @@ export interface productDataType {
   id: number;
   data: ShopDetailPageType;
 }
+
+export interface portalSliceType {
+  openMobileMenu: boolean;
+  openImageModal: boolean;
+}
