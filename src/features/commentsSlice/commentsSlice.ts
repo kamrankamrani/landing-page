@@ -7,7 +7,7 @@ interface commentSliceType {
 }
 
 const initialState: commentSliceType = {
-  comments: [{ id: -1, text: "", date: "" }],
+  comments: [{ id: -1, text: "", date: "", shop: "" }],
 };
 
 const commentsSlice = createSlice({
