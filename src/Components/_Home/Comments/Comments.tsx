@@ -7,6 +7,7 @@ import { NumToPersian } from "../../../Services/ConvertNumber";
 import { commentType } from "../../../Services/Types";
 import commentSource from "./CommentSource";
 import InsertCommentRoundedIcon from "@mui/icons-material/InsertCommentRounded";
+import StorefrontRoundedIcon from "@mui/icons-material/StorefrontRounded";
 import "./Style/comments.css";
 
 export default function Comments() {
@@ -67,7 +68,7 @@ export default function Comments() {
     <Grid container className="comments-parent">
       <Grid container className="header">
         <InsertCommentRoundedIcon fontSize="small" />
-        <Typography>مردم درباره ما چه میگویند؟</Typography>
+        <Typography>مشتریان درباره ما چه میگویند؟</Typography>
       </Grid>
       <Grid
         container
@@ -93,6 +94,10 @@ export default function Comments() {
                   <Typography variant="caption">
                     {NumToPersian(value.date)}
                   </Typography>
+                </div>
+                <div>
+                  <StorefrontRoundedIcon fontSize="small" />
+                  <Typography variant="body2">{value.shop}</Typography>
                 </div>
               </div>
             </Grid>

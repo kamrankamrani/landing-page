@@ -39,8 +39,8 @@ export default function ImageModal() {
         imgModalEl.current.style.zIndex = "10";
         imgModalEl.current.style.opacity = "1";
       } else {
-        document.body.style.overflow = "scroll";
-        document.body.style.position = "static";
+        document.body.style.removeProperty("overflow");
+        document.body.style.removeProperty("position");
         // imgModalEl.current.style.backgroundImage = "none";
         imgModalEl.current.style.opacity = "0";
         imgModalEl.current.style.zIndex = "-10";
