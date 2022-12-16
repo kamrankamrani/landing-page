@@ -7,19 +7,19 @@
 
 ### Tech Stack:
 
-..* JavaScript
+* JavaScript
 
-..* TypeScript
+* TypeScript
 
-..* ReactJs
+* ReactJs
 
-..* Redux Toolkit
+* Redux Toolkit
 
-..* Material UI (MUI)
+* Material UI (MUI)
 
-..* CSS
+* CSS
 
-..* Git
+* Git
 
 
 #### Description:
