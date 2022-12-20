@@ -95,6 +95,10 @@
   display: flex;
 }
 
+#store-side-menu :is(p, span) {
+  font-family: Vazirmatn, sans-serif;
+}
+
 @keyframes hideStoreSideMenu {
   from {
     transform: scaleX(1);

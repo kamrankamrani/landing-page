@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Grid, Typography } from "@mui/material";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import LogoSvg from "../../../assets/logo.svg";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   setScreenMiddleSize,
@@ -14,6 +15,7 @@ import DehazeRoundedIcon from "@mui/icons-material/DehazeRounded";
 import { useNavigate } from "react-router-dom";
 import MobilMenu from "../../_Portals/MobileMenu/MobileMenu";
 import { setOpenMobileMenu } from "../../../features/portalSlice/portalSlice";
+import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import "./Style/style.css";
 
 export default function Header() {
@@ -43,6 +45,15 @@ export default function Header() {
       case "store":
         navigate("/store");
         break;
+      case "plus":
+        window.open("https://plus.visto.ir", "_blank");
+        break;
+      case "iphone":
+        window.open("https://app.visto.ir", "_blank");
+        break;
+      case "android":
+        window.open("https://cafebazaar.ir/app/com.visto.Visto", "_blank");
+        break;
       default:
         break;
     }
@@ -71,14 +82,17 @@ export default function Header() {
             </div>
             <div className="dropdown-content">
               <div>
-                <p>اندروید</p>
+                <p onClick={() => handleHeaderClick("android")}>اندروید</p>
                 <hr />
-                <p>آیفون</p>
+                <p onClick={() => handleHeaderClick("iphone")}>وب اپلیکیشن</p>
               </div>
             </div>
           </div>
-          <div className="menu-container">
-            <Typography className="text">ویستو پلاس</Typography>
+          <div className="menu-container plus-container">
+            <div className="plus" onClick={() => handleHeaderClick("plus")}>
+              <AutoAwesomeRoundedIcon fontSize="small" />
+              <Typography className="text">ویستو پلاس</Typography>
+            </div>
           </div>
           <div className="header-home-container">
             <div className="home" onClick={() => handleHeaderClick("home")}>

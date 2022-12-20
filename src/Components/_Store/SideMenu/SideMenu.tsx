@@ -4,9 +4,9 @@ import { Typography } from "@mui/material";
 import CategoryIcon from "@mui/icons-material/Category";
 import CloseIcon from "@mui/icons-material/Close";
 import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
-import "./Style/style.css";
 import { useEffect, useState } from "react";
 import { useAppSelector } from "../../../hooks";
+import "./Style/style.css";
 
 export default function SideMenu() {
   const [isHide, setIsHide] = useState(false);

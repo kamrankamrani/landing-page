@@ -12,8 +12,12 @@ export default function AppTab() {
 
   const handleClickLink = (value: string) => {
     if (value === "iphone") {
-      if (shopItem.app_data) {
+      if (shopItem.app_data.webapp_link) {
         window.open(shopItem.app_data.webapp_link, "_blank");
+      }
+    } else if (value === "android") {
+      if (shopItem.app_data.android_link) {
+        window.open(shopItem.app_data.android_link, "_blank");
       }
     }
   };
@@ -31,7 +35,12 @@ export default function AppTab() {
           <Typography>لینک وب اپلیکیشن مخصوص آیفون و اندروید</Typography>
         </div>
       </Grid>
-      <Grid xs={12} md={6} className="link-container android">
+      <Grid
+        xs={12}
+        md={6}
+        className="link-container android"
+        onClick={() => handleClickLink("android")}
+      >
         <div className="wrapper">
           <AdbRoundedIcon />
           <Typography>اپلیکیشن مخصوص اندروید</Typography>
